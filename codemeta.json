@@ -201,7 +201,7 @@
       "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
-      "version": ">= 4.1"
+      "version": ">= 4.0"
     },
     {
       "@type": "SoftwareApplication",
@@ -282,7 +282,7 @@
       "sameAs": "https://CRAN.R-project.org/package=lubridate"
     }
   ],
-  "fileSize": "31.728KB",
+  "fileSize": "31.627KB",
   "contIntegration": ["https://github.com/gipso/lubritime/actions", "https://codecov.io/gh/gipso/lubritime"],
   "developmentStatus": ["https://www.repostatus.org/#wip", "https://lifecycle.r-lib.org/articles/stages.html#experimental"],
   "releaseNotes": "https://github.com/gipso/lubritime/blob/master/NEWS.md",
@@ -311,6 +311,8 @@
     "r",
     "sleep",
     "chronobiology",
-    "r-package"
-  ]
+    "r-package",
+    "time"
+  ],
+  "readme": "https://github.com/gipso/lubritime/blob/main/README.md"
 }

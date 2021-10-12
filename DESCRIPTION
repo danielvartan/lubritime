@@ -24,7 +24,7 @@ URL: https://gipso.github.io/lubritime/,
      https://github.com/gipso/lubritime/
 BugReports: https://github.com/gipso/lubritime/issues/
 Depends:
-    R (>= 4.1)
+    R (>= 4.0)
 Imports: 
     checkmate (>= 2.0.0),
     cli (>= 3.0.1),
