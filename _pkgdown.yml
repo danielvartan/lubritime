@@ -1,0 +1,37 @@
+url: https://gipso.github.io/lubritime/
+
+template:
+  params:
+    bootswatch: cosmo
+    ganalytics: G-DZTTH062C3
+    mathjax: true
+    noindex: true
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [github]
+  components:
+    home: ~
+    news: ~
+    articles: ~
+
+reference:
+- title: Utilities
+  contents:
+  - raw_data
+
+authors:
+  Daniel Vartanian:
+    href: https://github.com/danielvartan
+  Mario Pedrazzoli:
+    href: https://github.com/pedrazzo
+  Interdisciplinary Sleep Research Group (GIPSO):
+    href: http://each.usp.br/gipso
+  University of Sao Paulo (USP):
+    href: http://usp.br
+
+development:
+  mode: auto
+  destination: doc
+  version_label: warning

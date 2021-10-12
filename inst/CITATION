@@ -1,0 +1,22 @@
+citHeader("To cite {lubritime} in publications use:")
+
+citEntry(
+  entry       = "Unpublished",
+  title       = paste0("{lubritime}:", " ",
+                       "An extension for the {lubridate} package", " ",
+                       "to deal with time in R"),
+  author      = personList(as.person("Daniel Vartanian"),
+                           as.person("Mario Pedrazzoli")),
+  year        = "2021",
+  url         = paste0("https://gipso.github.io/",
+                        "lubritime/"),
+  textVersion = paste0("Vartanian, D.", ", ",
+                       "Pedrazzoli, M.", " ",
+                       "(2021)",  ". ",
+                       "{lubritime}:", " ",
+                       "An extension for the {lubridate} package", " ",
+                       "to deal with time in R", ". ",
+                       "Retrieved from https://gipso.github.io/",
+                       "lubritime/", "."),
+  note        = "Lifecycle: experimental"
+)
