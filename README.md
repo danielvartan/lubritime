@@ -11,16 +11,18 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/gipso/lubritime/workflows/R-CMD-check/badge.svg)](https://github.com/gipso/lubritime/actions)
-[![codecov](https://codecov.io/gh/gipso/lubritime/branch/main/graph/badge.svg)](https://codecov.io/gh/gipso/lubritime)
+[![Codecov test
+coverage](https://codecov.io/gh/gipso/lubritime/branch/main/graph/badge.svg)](https://codecov.io/gh/gipso/lubritime?branch=main)
 [![License:
 MIT](https://img.shields.io/badge/license-MIT-green)](https://choosealicense.com/licenses/mit/)
 <!-- badges: end -->
 
-`lubritime` is an extension for the {lubridate} package from tidyverse,
-adding new features to deal with temporal objects.
+`lubritime` is an extension for the
+[lubridate](https://github.com/tidyverse/lubridate) package from
+tidyverse, adding new features to deal with temporal objects.
 
-`lubritime` is not related in any way with `RStudio` or the `lubridate`
-developer team.
+Please note that `lubritime` is not related in any way with `RStudio` or
+the `lubridate` developer team.
 
 > Please note that this package is currently on the development stage
 > and have not yet been [peer

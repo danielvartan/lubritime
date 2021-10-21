@@ -9,7 +9,7 @@ citEntry(
                            as.person("Mario Pedrazzoli")),
   year        = "2021",
   url         = paste0("https://gipso.github.io/",
-                        "lubritime/"),
+                       "lubritime/"),
   textVersion = paste0("Vartanian, D.", ", ",
                        "Pedrazzoli, M.", " ",
                        "(2021)",  ". ",

@@ -282,8 +282,8 @@
       "sameAs": "https://CRAN.R-project.org/package=lubridate"
     }
   ],
-  "fileSize": "31.627KB",
-  "contIntegration": ["https://github.com/gipso/lubritime/actions", "https://codecov.io/gh/gipso/lubritime"],
+  "fileSize": "31.472KB",
+  "contIntegration": ["https://github.com/gipso/lubritime/actions", "https://codecov.io/gh/gipso/lubritime?branch=main"],
   "developmentStatus": ["https://www.repostatus.org/#wip", "https://lifecycle.r-lib.org/articles/stages.html#experimental"],
   "releaseNotes": "https://github.com/gipso/lubritime/blob/master/NEWS.md",
   "citation": [
