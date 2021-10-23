@@ -2,11 +2,7 @@
 % Please edit documentation in R/sum_time.R
 \name{sum_time}
 \alias{sum_time}
-\alias{vct_sum_time}
 \title{Sum time objects}
-\usage{
-vct_sum_time(..., cycle = NULL, reverse = TRUE, na_rm = FALSE)
-}
 \description{
 See \code{\link[mctq:sum_time]{mctq::sum_time()}} for details.
 }

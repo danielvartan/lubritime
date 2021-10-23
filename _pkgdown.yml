@@ -20,12 +20,14 @@ reference:
 - title: Time arithmetic
   contents:
   - sum_time
+  - vct_sum_time
 
 - title: Circular time
   contents:
   - assign_date
   - cycle_time
   - shorter_interval
+  - longer_interval
 
 - title: Utilities
   contents:

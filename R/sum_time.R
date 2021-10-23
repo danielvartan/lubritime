@@ -8,6 +8,12 @@
 #' @export
 NULL
 
-#' @rdname sum_time
+#' Sum time objects in a vectorized way
+#'
+#' See [mctq::vct_sum_time()] for details.
+#'
+#' @name vct_sum_time
+#' @keywords internal
+#' @importFrom mctq vct_sum_time
 #' @export
-vct_sum_time <- mctq::vct_sum_time
+NULL

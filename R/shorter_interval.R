@@ -8,6 +8,12 @@
 #' @export
 NULL
 
-#' @rdname shorter_interval
+#' Find the longer interval between two hours
+#'
+#' See [mctq::longer_interval()] for details.
+#'
+#' @name longer_interval
+#' @keywords internal
+#' @importFrom mctq longer_interval
 #' @export
-longer_interval <- mctq::longer_interval
+NULL

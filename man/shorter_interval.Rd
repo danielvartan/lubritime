@@ -2,11 +2,7 @@
 % Please edit documentation in R/shorter_interval.R
 \name{shorter_interval}
 \alias{shorter_interval}
-\alias{longer_interval}
 \title{Find the shorter interval between two hours}
-\usage{
-longer_interval(x, y)
-}
 \description{
 See \code{\link[mctq:shorter_interval]{mctq::shorter_interval()}} for details.
 }

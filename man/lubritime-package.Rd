@@ -4,7 +4,7 @@
 \name{lubritime-package}
 \alias{lubritime}
 \alias{lubritime-package}
-\title{lubritime: An Extension for the Lubridate Package to Deal with Time in R}
+\title{lubritime: An Extension for the Lubridate Package}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 

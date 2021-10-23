@@ -44,7 +44,9 @@ In case you don't feel comfortable with R, we strongly recommend checking Hadley
 
 ## Installation
 
-You can install the development version from GitHub with:
+`lubritime` is still at the [experimental](https://lifecycle.r-lib.org/articles/stages.html#experimental) stage of development. That means people can use the package and provide feedback, but it comes with no promises for long term stability.
+
+You can install `lubritime` from GitHub with:
 
 ``` {r, eval = FALSE}
 # install.packages("remotes")
