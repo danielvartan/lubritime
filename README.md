@@ -72,14 +72,14 @@ citation("lubritime")
 #> 
 #> To cite {lubritime} in publications use:
 #> 
-#>   Vartanian, D., Pedrazzoli, M. (2021). {lubritime}: An extension for
+#>   Vartanian, D., Pedrazzoli, M. (2021). {lubritime}: an extension for
 #>   the {lubridate} package. Retrieved from
 #>   https://gipso.github.io/lubritime/.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Unpublished{,
-#>     title = {{lubritime}: An extension for the {lubridate} package},
+#>     title = {{lubritime}: an extension for the {lubridate} package},
 #>     author = {Daniel Vartanian and Mario Pedrazzoli},
 #>     year = {2021},
 #>     url = {https://gipso.github.io/lubritime/},
