@@ -4,9 +4,21 @@
     <loc>https://gipso.github.io/lubritime//index.html</loc>
   </url>
   <url>
+    <loc>https://gipso.github.io/lubritime//reference/assign_date.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime//reference/cycle_time.html</loc>
+  </url>
+  <url>
     <loc>https://gipso.github.io/lubritime//reference/lubritime-package.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/raw_data.html</loc>
+    <loc>https://gipso.github.io/lubritime//reference/round_time.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime//reference/shorter_interval.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime//reference/sum_time.html</loc>
   </url>
 </urlset>
