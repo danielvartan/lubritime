@@ -10,6 +10,9 @@
     <loc>https://gipso.github.io/lubritime//reference/cycle_time.html</loc>
   </url>
   <url>
+    <loc>https://gipso.github.io/lubritime//reference/longer_interval.html</loc>
+  </url>
+  <url>
     <loc>https://gipso.github.io/lubritime//reference/lubritime-package.html</loc>
   </url>
   <url>
@@ -20,5 +23,8 @@
   </url>
   <url>
     <loc>https://gipso.github.io/lubritime//reference/sum_time.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime//reference/vct_sum_time.html</loc>
   </url>
 </urlset>
