@@ -5,7 +5,7 @@ template:
     bootswatch: cosmo
     ganalytics: G-DZTTH062C3
     mathjax: true
-    noindex: true
+    noindex: false
 
 navbar:
   structure:
@@ -17,9 +17,19 @@ navbar:
     articles: ~
 
 reference:
+- title: Time arithmetic
+  contents:
+  - sum_time
+
+- title: Circular time
+  contents:
+  - assign_date
+  - cycle_time
+  - shorter_interval
+
 - title: Utilities
   contents:
-  - raw_data
+  - round_time
 
 authors:
   Daniel Vartanian:

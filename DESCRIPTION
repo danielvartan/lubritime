@@ -29,23 +29,22 @@ Imports:
     checkmate (>= 2.0.0),
     cli (>= 3.0.1),
     dplyr (>= 1.0.7),
+    gutils,
     hms (>= 1.1.1),
     lifecycle (>= 1.0.1),
-    lubridate (>= 1.8.0)
+    lubridate (>= 1.8.0),
+    mctq
 Suggests: 
     covr,
-    datasets,
-    ggplot2,
-    grDevices,
     knitr,
     mockr,
-    readr,
     rmarkdown,
     spelling,
     stats,
-    testthat (>= 3.0.0),
-    usethis,
-    utils
+    testthat (>= 3.0.0)
+Remotes: 
+    github::gipso/gutils
+    github::gipso/mctq
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3
