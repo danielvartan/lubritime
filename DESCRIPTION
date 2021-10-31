@@ -44,7 +44,7 @@ Suggests:
     testthat (>= 3.0.0)
 Remotes: 
     github::gipso/gutils,
-    github::gipso/mctq
+    github::ropensci/mctq
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3
