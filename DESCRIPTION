@@ -17,7 +17,7 @@ Authors@R:
       person(given = "University of Sao Paulo (USP)",
              role = "fnd"))
 Maintainer: Daniel Vartanian <danvartan@gmail.com>
-Description: An extension for the {lubridate} package from tidyverse, adding new 
+Description: An extension for the 'lubridate' package from tidyverse, adding new 
      features to deal with temporal objects.
 License: MIT + file LICENSE
 URL: https://gipso.github.io/lubritime/, 
