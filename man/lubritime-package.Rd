@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-An extension for the {lubridate} package from tidyverse, adding new features to deal with temporal objects.
+An extension for the 'lubridate' package from tidyverse, adding new features to deal with temporal objects.
 }
 \seealso{
 Useful links:

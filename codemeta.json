@@ -5,8 +5,8 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "lubritime",
-  "description": "An extension for the {lubridate} package from tidyverse, adding new \n     features to deal with temporal objects.",
-  "name": "lubritime: An Extension for the Lubridate Package to Deal with Time in R",
+  "description": "An extension for the 'lubridate' package from tidyverse, adding new \n     features to deal with temporal objects.",
+  "name": "lubritime: An Extension for the Lubridate Package",
   "codeRepository": "https://github.com/gipso/lubritime/",
   "relatedLink": [
     "https://gipso.github.io/lubritime/"
@@ -80,28 +80,6 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "datasets",
-      "name": "datasets"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "ggplot2",
-      "name": "ggplot2",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "grDevices",
-      "name": "grDevices"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "knitr",
       "name": "knitr",
       "provider": {
@@ -123,18 +101,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=mockr"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "readr",
-      "name": "readr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=readr"
     },
     {
       "@type": "SoftwareApplication",
@@ -177,23 +143,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=testthat"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "usethis",
-      "name": "usethis",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=usethis"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "utils",
-      "name": "utils"
     }
   ],
   "softwareRequirements": [
@@ -244,6 +193,12 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "gutils",
+      "name": "gutils",
+      "sameAs": "https://github.com/gipso/gutils"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "hms",
       "name": "hms",
       "version": ">= 1.1.1",
@@ -280,9 +235,15 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=lubridate"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "mctq",
+      "name": "mctq",
+      "sameAs": "https://github.com/ropensci/mctq"
     }
   ],
-  "fileSize": "31.472KB",
+  "fileSize": "41.676KB",
   "contIntegration": ["https://github.com/gipso/lubritime/actions", "https://codecov.io/gh/gipso/lubritime?branch=main"],
   "developmentStatus": ["https://www.repostatus.org/#wip", "https://lifecycle.r-lib.org/articles/stages.html#experimental"],
   "releaseNotes": "https://github.com/gipso/lubritime/blob/master/NEWS.md",
@@ -302,7 +263,7 @@
           "familyName": "Pedrazzoli"
         }
       ],
-      "name": "{lubritime}: An extension for the {lubridate} package to deal with time in R",
+      "name": "{lubritime}: an extension for the {lubridate} package",
       "url": "https://gipso.github.io/lubritime/",
       "description": "Lifecycle: experimental"
     }
@@ -312,7 +273,8 @@
     "sleep",
     "chronobiology",
     "r-package",
-    "time"
+    "time",
+    "rstats"
   ],
   "readme": "https://github.com/gipso/lubritime/blob/main/README.md"
 }
