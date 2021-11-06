@@ -1,0 +1,42 @@
+# -----------------------------------------------------------
+# CITATION file created with {cffr} R package, v0.1.0
+# See also: https://docs.ropensci.org/cffr/
+# -----------------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "lubritime" in publications use:'
+type: software
+license: MIT
+title: 'lubritime: An Extension for the Lubridate Package'
+version: 0.0.0.9000
+abstract: An extension for the 'lubridate' package from tidyverse, adding new features
+  to deal with temporal objects.
+authors:
+- family-names: Vartanian
+  given-names: Daniel
+  email: danvartan@gmail.com
+  orcid: https://orcid.org/0000-0001-7782-759X
+- family-names: Pedrazzoli
+  given-names: Mario
+  email: pedrazzo@usp.br
+  orcid: https://orcid.org/0000-0002-5257-591X
+preferred-citation:
+  type: unpublished
+  title: 'lubritime: an extension for the lubridate package'
+  authors:
+  - family-names: Vartanian
+    given-names: Daniel
+  - family-names: Pedrazzoli
+    given-names: Mario
+  year: '2021'
+  url: https://gipso.github.io/lubritime/
+repository-code: https://github.com/gipso/lubritime/issues/
+url: https://gipso.github.io/lubritime/
+contact:
+- family-names: Vartanian
+  given-names: Daniel
+  email: danvartan@gmail.com
+  orcid: https://orcid.org/0000-0001-7782-759X
+identifiers:
+- type: url
+  value: https://github.com/gipso/lubritime/

@@ -16,7 +16,6 @@ Authors@R:
              role = "fnd"),
       person(given = "University of Sao Paulo (USP)",
              role = "fnd"))
-Maintainer: Daniel Vartanian <danvartan@gmail.com>
 Description: An extension for the 'lubridate' package from tidyverse, adding new 
      features to deal with temporal objects.
 License: MIT + file LICENSE
@@ -33,7 +32,7 @@ Imports:
     hms (>= 1.1.1),
     lifecycle (>= 1.0.1),
     lubridate (>= 1.8.0),
-    mctq
+    mctq (>= 0.1.0)
 Suggests: 
     covr,
     knitr,
@@ -43,8 +42,7 @@ Suggests:
     stats,
     testthat (>= 3.0.0)
 Remotes: 
-    github::gipso/gutils,
-    github::ropensci/mctq
+    github::gipso/gutils
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3
