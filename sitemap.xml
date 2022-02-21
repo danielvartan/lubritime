@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gipso.github.io/lubritime//index.html</loc>
+    <loc>https://gipso.github.io/lubritime/404.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/assign_date.html</loc>
+    <loc>https://gipso.github.io/lubritime/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/cycle_time.html</loc>
+    <loc>https://gipso.github.io/lubritime/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/longer_interval.html</loc>
+    <loc>https://gipso.github.io/lubritime/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/lubritime-package.html</loc>
+    <loc>https://gipso.github.io/lubritime/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/round_time.html</loc>
+    <loc>https://gipso.github.io/lubritime/authors.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/shorter_interval.html</loc>
+    <loc>https://gipso.github.io/lubritime/index.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/sum_time.html</loc>
+    <loc>https://gipso.github.io/lubritime/news/index.html</loc>
   </url>
   <url>
-    <loc>https://gipso.github.io/lubritime//reference/vct_sum_time.html</loc>
+    <loc>https://gipso.github.io/lubritime/reference/assign_date.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime/reference/cycle_time.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime/reference/longer_interval.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime/reference/lubritime-package.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime/reference/round_time.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime/reference/shorter_interval.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime/reference/sum_time.html</loc>
+  </url>
+  <url>
+    <loc>https://gipso.github.io/lubritime/reference/vct_sum_time.html</loc>
   </url>
 </urlset>
