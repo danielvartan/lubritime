@@ -1,11 +1,10 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# lubritime <a href='https://gipso.github.io/lubritime'><img src='man/figures/logo.png' align="right" height="139" /></a>
+# lubritime
 
 <!-- badges: start -->
 
-![CRAN status](https://www.r-pkg.org/badges/version/lubritime)
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
@@ -26,10 +25,8 @@ button](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](h
 
 `lubritime` is an extension for the
 [lubridate](https://github.com/tidyverse/lubridate) package from
-tidyverse, adding new features to deal with temporal objects.
-
-Please note that `lubritime` is not related in any way with `RStudio` or
-the `lubridate` developer team.
+tidyverse, adding new features to deal with temporal objects. It’s not
+related in any way with `RStudio` or the `lubridate` developer team.
 
 > Please note that this package is currently on the development stage
 > and have not yet been [peer
@@ -49,11 +46,6 @@ R](https://www.coursera.org/specializations/data-science-foundations-r)
 
 ## Installation
 
-`lubritime` is still at the
-[experimental](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-stage of development. That means people can use the package and provide
-feedback, but it comes with no promises for long term stability.
-
 You can install `lubritime` from GitHub with:
 
 ``` r
@@ -72,38 +64,26 @@ citation("lubritime")
 #> 
 #> To cite {lubritime} in publications use:
 #> 
-#>   Vartanian, D., Pedrazzoli, M. (2021). {lubritime}: an extension for
-#>   the {lubridate} package. Retrieved from
-#>   https://gipso.github.io/lubritime/.
+#>   Vartanian, D., & Pedrazzoli, M. (2022). {lubritime}: an extension for
+#>   the {lubridate} package. https://gipso.github.io/lubritime/
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Unpublished{,
 #>     title = {{lubritime}: an extension for the {lubridate} package},
 #>     author = {Daniel Vartanian and Mario Pedrazzoli},
-#>     year = {2021},
+#>     year = {2022},
 #>     url = {https://gipso.github.io/lubritime/},
 #>     note = {Lifecycle: experimental},
 #>   }
 ```
 
-## Support `lubritime`
+## Contributing
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/danielvartan)
+We welcome contributions, including bug reports. Take a moment to review
+our [Guidelines for
+Contributing](https://gipso.github.io/lubritime/CONTRIBUTING.html).
 
-Working with science in Brazil is a daily challenge. There are few
-funding opportunities available and their value is not enough to live
-on. Added to this, every day Brazilian science suffers from deep cuts in
-funding, which requires researchers to always look for other sources of
-income.
-
-If this package helps you in any way or you simply want to support the
-author’s work, please consider donating or even creating a membership
-subscription (if you can!). Your support will help with the author’s
-scientific pursuit and with the package maintenance.
-
-To make a donation click on the [Ko-fi](https://ko-fi.com/danielvartan)
-button above. Please indicate the `lubritime` package in your donation
-message.
-
-Thank you!
+Please note that `actverse` is released with a [Contributor Code of
+Conduct](https://gipso.github.io/lubritime/CODE_OF_CONDUCT.html). By
+contributing to this project, you agree to abide by its terms.
