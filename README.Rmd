@@ -24,14 +24,13 @@ library(lubritime)
 [![Codecov test coverage](https://codecov.io/gh/gipso/lubritime/branch/main/graph/badge.svg)](https://codecov.io/gh/gipso/lubritime?branch=main)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://choosealicense.com/licenses/mit/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://gipso.github.io/lubritime/CODE_OF_CONDUCT.html)
-[![Buy Me A Coffee donate button](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://ko-fi.com/danielvartan)
 <!-- badges: end -->
 
 ## Overview
 
-`lubritime` is an extension for the [lubridate](https://github.com/tidyverse/lubridate) package from tidyverse, adding new features to deal with temporal objects. It's not related in any way with `RStudio` or the `lubridate` developer team.
+`lubritime` is an extension for the [lubridate](https://github.com/tidyverse/lubridate) package from tidyverse, adding new features to deal with temporal objects.
 
-> Please note that this package is currently on the development stage and have not yet been [peer reviewed](https://devguide.ropensci.org/softwarereviewintro.html).
+Please note that `lubritime` is not related in any way with `RStudio` or the `lubridate` developer team.
 
 ## Prerequisites
 
@@ -41,7 +40,7 @@ In case you don't feel comfortable with R, we strongly recommend checking Hadley
 
 ## Installation
 
-You can install `lubritime` from GitHub with:
+You can install the development version from GitHub with:
 
 ``` {r, eval = FALSE}
 # install.packages("remotes")

@@ -4,6 +4,6 @@
 \alias{shorter_interval}
 \title{Find the shorter interval between two hours}
 \description{
-See \code{\link[mctq:shorter_interval]{mctq::shorter_interval()}} for details.
+See \code{\link[mctq:shorter_interval]{shorter_interval()}} for details.
 }
 \keyword{internal}

@@ -6,8 +6,6 @@
 \alias{lubritime-package}
 \title{lubritime: An Extension for the Lubridate Package}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
-
 An extension for the 'lubridate' package from tidyverse, adding new features to deal with temporal objects.
 }
 \seealso{
