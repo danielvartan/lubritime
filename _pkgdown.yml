@@ -1,19 +1,22 @@
-url: https://gipso.github.io/lubritime/
+url: https://giperbio.github.io/lubritime/
 
 template:
   params:
     bootswatch: cosmo
-    ganalytics: G-DZTTH062C3
     mathjax: true
-    noindex: false
 
 navbar:
   structure:
-    left:  [intro, reference, articles, news]
-    right: [github]
+    left:
+      - home
+      - intro
+      - reference
+      - articles
+      - news
+      right: github
   components:
     home: ~
-    news: ~
+    intro: ~
     articles: ~
 
 reference:
@@ -27,7 +30,6 @@ reference:
   - assign_date
   - cycle_time
   - shorter_interval
-  - longer_interval
 
 - title: Utilities
   contents:

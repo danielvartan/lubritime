@@ -1,20 +1,32 @@
-citHeader("To cite {lubritime} in publications use:")
-
-citEntry(
-  entry       = "Unpublished",
-  title       = paste0("{lubritime}:", " ",
-                       "an extension for the {lubridate} package"),
-  author      = personList(as.person("Daniel Vartanian"),
-                           as.person("Mario Pedrazzoli")),
-  year        = "2022",
-  url         = paste0("https://gipso.github.io/",
-                       "lubritime/"),
-  textVersion = paste0("Vartanian, D.", ", & ",
-                       "Pedrazzoli, M.", " ",
-                       "(2022)",  ". ",
-                       "{lubritime}:", " ",
-                       "an extension for the {lubridate} package", ". ",
-                       "https://gipso.github.io/",
-                       "lubritime/"),
-  note        = "Lifecycle: experimental"
+utils::bibentry(
+    header = "To cite {lubritime} in publications use:",
+    bibtype  = "Unpublished",
+    title = paste0(
+        "{lubritime}:", " ",
+        "an extension for the {lubridate} package"
+    ),
+    author = c(
+        utils::person(
+            given = "Daniel",
+            family = "Vartanian",
+            role = c("aut", "cre", "ccp", "cph"),
+            email = "danvartan@gmail.com",
+            comment = c(ORCID = "0000-0001-7782-759X")
+        )
+    ),
+    year = "2023",
+    url = paste0(
+        "https://giperbio.github.io/",
+        "lubritime/"
+    ),
+    note = "R package version 0.0.0.9000",
+    textVersion = paste0(
+        "Vartanian, D.", " ",
+        "(2023)",  ". ",
+        "{lubritime}:", " ",
+        "an extension for the {lubridate} package", ". ",
+        "R package version 0.0.0.9000", ". ",
+        "https://giperbio.github.io/",
+        "lubritime/"
+        )
 )
