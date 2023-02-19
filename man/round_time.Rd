@@ -2,9 +2,24 @@
 % Please edit documentation in R/round_time.R
 \name{round_time}
 \alias{round_time}
+\alias{round_time.Duration}
+\alias{round_time.difftime}
+\alias{round_time.hms}
+\alias{round_time.POSIXct}
+\alias{round_time.POSIXlt}
 \title{Round time objects}
 \usage{
 round_time(x)
+
+\method{round_time}{Duration}(x)
+
+\method{round_time}{difftime}(x)
+
+\method{round_time}{hms}(x)
+
+\method{round_time}{POSIXct}(x)
+
+\method{round_time}{POSIXlt}(x)
 }
 \arguments{
 \item{x}{An object belonging to one of the following classes:
