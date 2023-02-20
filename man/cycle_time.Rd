@@ -2,9 +2,21 @@
 % Please edit documentation in R/cycle_time.R
 \name{cycle_time}
 \alias{cycle_time}
+\alias{cycle_time.numeric}
+\alias{cycle_time.Duration}
+\alias{cycle_time.difftime}
+\alias{cycle_time.hms}
 \title{Cycle time objects}
 \usage{
 cycle_time(time, cycle, reverse = TRUE)
+
+\method{cycle_time}{numeric}(time, cycle, reverse = TRUE)
+
+\method{cycle_time}{Duration}(time, cycle, reverse = TRUE)
+
+\method{cycle_time}{difftime}(time, cycle, reverse = TRUE)
+
+\method{cycle_time}{hms}(time, cycle, reverse = TRUE)
 }
 \arguments{
 \item{time}{An object belonging to one of the following classes:

@@ -1,9 +1,8 @@
 Package: lubritime
 Title: An Extension for the Lubridate Package
 Version: 0.0.0.9000
-Authors@R: 
-    c(
-        utils::person(
+Authors@R: c(
+        person(
             given = "Daniel",
             family = "Vartanian",
             role = c("aut", "cre", "ccp", "cph"),

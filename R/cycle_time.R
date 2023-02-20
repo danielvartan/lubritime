@@ -198,11 +198,13 @@ cycle_time <- function(time, cycle, reverse = TRUE) {
     UseMethod("cycle_time")
 }
 
+#' @rdname cycle_time
 #' @export
 cycle_time.numeric <- function(time, cycle, reverse = TRUE) {
     time %>% cycle_time_build(cycle, reverse)
 }
 
+#' @rdname cycle_time
 #' @export
 cycle_time.Duration <- function(time, cycle, reverse = TRUE) {
     time %>%
@@ -210,6 +212,7 @@ cycle_time.Duration <- function(time, cycle, reverse = TRUE) {
         lubridate::dseconds()
 }
 
+#' @rdname cycle_time
 #' @export
 cycle_time.difftime <- function(time, cycle, reverse = TRUE) {
     out <- time
@@ -224,6 +227,7 @@ cycle_time.difftime <- function(time, cycle, reverse = TRUE) {
     out
 }
 
+#' @rdname cycle_time
 #' @export
 cycle_time.hms <- function(time, cycle, reverse = TRUE) {
     time %>%
