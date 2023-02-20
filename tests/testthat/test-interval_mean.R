@@ -1,0 +1,37 @@
+test_that("interval_mean() | general test", {
+    expect_equal(interval_mean(
+        start = hms::parse_hm("22:00"), end = hms::parse_hm("06:00"),
+        ambiguity = 24
+    ),
+    hms::hms(26 * 3600)
+    )
+
+    expect_equal(interval_mean(
+        start = hms::parse_hm("00:00"), end = hms::parse_hm("10:00"),
+        ambiguity = 24
+    ),
+    hms::parse_hm("05:00")
+    )
+})
+
+test_that("interval_mean() | error test", {
+    # checkmate::assert_multi_class(start, classes)
+    expect_error(interval_mean(
+        start = 1, end = hms::hms(1), ambiguity = 24
+    ),
+    "Assertion on 'start' failed"
+    )
+
+    # checkmate::assert_multi_class(end, classes)
+    expect_error(interval_mean(
+        start = hms::hms(1), end = 1, ambiguity = 24
+    ), "Assertion on 'end' failed"
+    )
+
+    # checkmate::assert_choice(ambiguity, c(0, 24 , NA))
+    expect_error(interval_mean(
+        start = hms::hms(1), end = hms::hms(1), ambiguity = 1
+    ),
+    "Assertion on 'ambiguity' failed"
+    )
+})
