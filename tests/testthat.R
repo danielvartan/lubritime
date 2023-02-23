@@ -21,9 +21,8 @@ testthat::test_check("lubritime")
 # devtools::check_rhub()
 # devtools::check_rhub(platforms = c(
 #     "windows-x86_64-devel", "windows-x86_64-release",
-#     "macos-highsierra-release-cran", "ubuntu-gcc-devel",
-#     "ubuntu-gcc-release", "debian-clang-devel", "debian-gcc-release",
-#     "fedora-clang-devel", "solaris-x86-patched"
+#     "windows-x86_64-oldrel", "macos-highsierra-release-cran",
+#     "ubuntu-gcc-devel", "ubuntu-gcc-release"
 # ))
 # devtools::check_win_devel()
 # devtools::check_win_release()
@@ -34,6 +33,8 @@ testthat::test_check("lubritime")
 # devtools:test()
 # dlstats::cran_stats(c("mctq", "nparACT"))
 # goodpractice::gp()
+# lintr::use_lintr(type = "tidyverse")
+# lintr::lint_package()
 # normalizePath(readClipboard(), "/", mustWork = FALSE)
 # template <- list(package = "rotemplate")
 # pkgdown::build_article("mctq")
@@ -46,8 +47,7 @@ testthat::test_check("lubritime")
 # urlchecker::url_check()
 # usethis::use_coverage()
 # usethis::use_dev_version()
-# usethis::use_github_action("check-pak")
-# usethis::use_github_action("test-coverage-pak")
+# usethis::use_github_action("check-standard")
 # usethis::use_logo(file.choose())
 # usethis::use_release_issue("#.#.#")
 # usethis::use_dev_version()

@@ -93,7 +93,8 @@ round_time <- function(x) {
 #' @rdname round_time
 #' @export
 round_time.Duration <- function(x) {
-    x %>% as.numeric() %>%
+    x %>%
+        as.numeric() %>%
         round() %>%
         lubridate::dseconds()
 }
@@ -104,7 +105,8 @@ round_time.difftime <- function(x) {
     out <- x
     units(out) <- "secs"
 
-    out <- out %>% as.numeric() %>%
+    out <- out %>%
+        as.numeric() %>%
         round() %>%
         as.difftime(units = "secs")
 
@@ -116,7 +118,8 @@ round_time.difftime <- function(x) {
 #' @rdname round_time
 #' @export
 round_time.hms <- function(x) {
-    x %>% as.numeric() %>%
+    x %>%
+        as.numeric() %>%
         round() %>%
         hms::as_hms()
 }
@@ -124,7 +127,8 @@ round_time.hms <- function(x) {
 #' @rdname round_time
 #' @export
 round_time.POSIXct <- function(x) {
-    out <- x %>% as.numeric() %>%
+    out <- x %>%
+        as.numeric() %>%
         round()
 
     attributes(out) <- attributes(x)

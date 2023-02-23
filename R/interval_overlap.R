@@ -7,7 +7,7 @@ interval_overlap <- function(int1, int2) {
     overlap <- function(int1, int2) {
         if (isFALSE(lubridate::int_overlaps(int1, int2))) {
             return(gutils::na_as(int1))
-        } else{
+        } else {
             int_start <- dplyr::if_else(
                 lubridate::int_start(int1) >= lubridate::int_start(int2),
                 lubridate::int_start(int1), lubridate::int_start(int2))

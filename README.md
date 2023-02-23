@@ -12,7 +12,7 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/giperbio/lubritime/workflows/R-CMD-check/badge.svg)](https://github.com/giperbio/lubritime/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/giperbio/lubritime/branch/main/graph/badge.svg)](https://codecov.io/gh/giperbio/lubritime?branch=main)
+coverage](https://codecov.io/gh/giperbio/lubritime/branch/main/graph/badge.svg)](https://app.codecov.io/gh/giperbio/lubritime?branch=main)
 [![License:
 MIT](https://img.shields.io/badge/license-MIT-green)](https://choosealicense.com/licenses/mit/)
 [![Contributor
@@ -23,10 +23,11 @@ Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff6
 
 `lubritime` is an extension for the
 [lubridate](https://github.com/tidyverse/lubridate) package from
-tidyverse, adding new features to deal with temporal objects.
+[tidyverse](https://www.tidyverse.org/), adding new features to deal
+with temporal objects.
 
-Please note that `lubritime` is not related in any way with `RStudio` or
-the `lubridate` developer team.
+Please note that `lubritime` is not related in any way with
+`Posit/RStudio` or the `lubridate` developer team.
 
 ## Prerequisites
 
@@ -34,7 +35,8 @@ You need to have some familiarity with the [R programming
 language](https://www.r-project.org/) and with the
 [lubridate](https://lubridate.tidyverse.org/) and
 [hms](https://hms.tidyverse.org/) packages from
-[tidyverse](https://www.tidyverse.org/) to use `mctq` main functions.
+[tidyverse](https://www.tidyverse.org/) to use `lubritime` main
+functions.
 
 In case you don’t feel comfortable with R, we strongly recommend
 checking Hadley Wickham and Garrett Grolemund free and online book [R
@@ -52,7 +54,7 @@ times](https://r4ds.had.co.nz/dates-and-times.html) chapter from Wickham
 
 ## Installation
 
-You can install the development version from GitHub with:
+You can install `lubritime` with:
 
 ``` r
 # install.packages("remotes")

@@ -217,7 +217,7 @@ interval_build <- function(x, y, method = "shorter") {
     }
 
     if (any(x1_y1_interval == y1_x2_interval, na.rm = TRUE)) {
-        flags <- which(x1_y1_interval == y1_x2_interval)
+        flags <- which(x1_y1_interval == y1_x2_interval) # nolint
 
         cli::cli_alert_warning(paste0(
             "Element{?s} {gutils:::single_quote_(as.character(flags))} of 'x' ",
