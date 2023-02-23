@@ -38,10 +38,10 @@ language](https://www.r-project.org/) and with the
 [tidyverse](https://www.tidyverse.org/) to use `lubritime` main
 functions.
 
-In case you don’t feel comfortable with R, we strongly recommend
-checking Hadley Wickham and Garrett Grolemund free and online book [R
-for Data Science](https://r4ds.had.co.nz/) and the Coursera course from
-John Hopkins University [Data Science: Foundations using
+If you don’t feel comfortable with R, we strongly recommend checking
+Hadley Wickham and Garrett Grolemund free and online book [R for Data
+Science](https://r4ds.had.co.nz/) and the Coursera course from John
+Hopkins University [Data Science: Foundations using
 R](https://www.coursera.org/specializations/data-science-foundations-r)
 (free for audit students).
 

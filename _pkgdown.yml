@@ -4,6 +4,7 @@ template:
   params:
     bootswatch: cosmo
     mathjax: true
+    noindex: false
 
 navbar:
   structure:
@@ -41,5 +42,4 @@ authors:
 
 development:
   mode: auto
-  destination: doc
   version_label: warning
