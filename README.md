@@ -65,7 +65,7 @@ remotes::install_github("giperbio/lubritime")
 
 If you use `lubritime` in your research, please consider citing it. We
 put a lot of work to build and maintain a free and open-source R
-package. You can find the `lubritime` citation below.
+package. You can find the citation below.
 
 ``` r
 citation("lubritime")
