@@ -1,4 +1,5 @@
 library(checkmate)
+library(dplyr)
 library(hms)
 library(lubridate)
 library(lubritime)

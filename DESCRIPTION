@@ -17,7 +17,7 @@ URL: https://giperbio.github.io/lubritime/,
     https://github.com/giperbio/lubritime/
 BugReports: https://github.com/giperbio/lubritime/issues/
 Depends:
-    R (>= 4.1)
+    R (>= 4.2)
 Imports: 
     checkmate (>= 2.1.0),
     cli (>= 3.6.0),
@@ -33,7 +33,7 @@ Suggests:
     rlang (>= 1.0.6),
     rmarkdown (>= 2.20),
     spelling (>= 2.2),
-    stats (>= 4.1.0),
+    stats (>= 4.2.0),
     testthat (>= 3.1.6)
 Remotes: 
     github::giperbio/gutils
