@@ -30,7 +30,7 @@ reference:
   contents:
   - assign_date
   - cycle_time
-  - shorter_interval
+  - shorter_int
 
 - title: Utilities
   contents:

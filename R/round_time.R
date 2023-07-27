@@ -84,71 +84,71 @@
 #' round_time(c(lubridate::dhours(5.6987), lubridate::dhours(2.6875154)))
 #' #> [1] "20515s (~5.7 hours)" "9675s (~2.69 hours)" # Expected
 round_time <- function(x) {
-    classes <- c("Duration", "difftime", "hms", "POSIXct", "POSIXlt")
-    checkmate::assert_multi_class(x, classes)
+  classes <- c("Duration", "difftime", "hms", "POSIXct", "POSIXlt")
+  checkmate::assert_multi_class(x, classes)
 
-    UseMethod("round_time")
+  UseMethod("round_time")
 }
 
 #' @rdname round_time
 #' @export
 round_time.Duration <- function(x) {
-    x %>%
-        as.numeric() %>%
-        round() %>%
-        lubridate::dseconds()
+  x |>
+    as.numeric() |>
+    round() |>
+    lubridate::dseconds()
 }
 
 #' @rdname round_time
 #' @export
 round_time.difftime <- function(x) {
-    out <- x
-    units(out) <- "secs"
+  out <- x
+  units(out) <- "secs"
 
-    out <- out %>%
-        as.numeric() %>%
-        round() %>%
-        as.difftime(units = "secs")
+  out <- out |>
+    as.numeric() |>
+    round() |>
+    as.difftime(units = "secs")
 
-    units(out) <- units(x)
+  units(out) <- units(x)
 
-    out
+  out
 }
 
 #' @rdname round_time
 #' @export
 round_time.hms <- function(x) {
-    x %>%
-        as.numeric() %>%
-        round() %>%
-        hms::as_hms()
+  x |>
+    as.numeric() |>
+    round() |>
+    hms::as_hms()
 }
 
 #' @rdname round_time
 #' @export
 round_time.POSIXct <- function(x) {
-    out <- x %>%
-        as.numeric() %>%
-        round()
+  out <- x |>
+    as.numeric() |>
+    round()
 
-    attributes(out) <- attributes(x)
+  attributes(out) <- attributes(x)
 
-    out
+  out
 }
 
 #' @rdname round_time
 #' @export
 round_time.POSIXlt <- function(x) {
-    out <- unclass(x)
+  out <- unclass(x)
 
-    if (round(out$sec) >= 60) {
-        out$sec <- round(out$sec) - 60
-        out$min <- out$min + 1
-    } else {
-        out$sec <- round(out$sec)
-    }
+  if (round(out$sec) >= 60) {
+    out$sec <- round(out$sec) - 60
+    out$min <- out$min + 1
+  } else {
+    out$sec <- round(out$sec)
+  }
 
-    class(out) <- class(x)
+  class(out) <- class(x)
 
-    out
+  out
 }

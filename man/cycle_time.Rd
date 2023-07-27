@@ -215,6 +215,6 @@ Wickham, H., & Grolemund, G. (n.d.). \emph{R for data science}. (n.p.).
 \seealso{
 Other circular time functions: 
 \code{\link{assign_date}()},
-\code{\link{shorter_interval}()}
+\code{\link{shorter_int}()}
 }
 \concept{circular time functions}
