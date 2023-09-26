@@ -35,7 +35,7 @@ test_that("link_to_timeline() | error test", {
   ) |>
     expect_error("Assertion on 'x' failed")
 
-  # gutils:::assert_hms(
+  # rutils:::assert_hms(
   #     threshold, lower = hms::hms(0), upper = hms::parse_hms("23:59:59")
   # )
   link_to_timeline(

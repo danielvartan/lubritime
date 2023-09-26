@@ -22,10 +22,10 @@ Imports:
     checkmate (>= 2.1.0),
     cli (>= 3.6.0),
     dplyr (>= 1.1.0),
-    gutils,
     hms (>= 1.1.2),
     lifecycle (>= 1.0.3),
-    lubridate (>= 1.9.2)
+    lubridate (>= 1.9.2),
+    rutils
 Suggests: 
     covr (>= 3.6.1),
     knitr (>= 1.42),
@@ -36,7 +36,7 @@ Suggests:
     stats (>= 4.2.0),
     testthat (>= 3.1.6)
 Remotes: 
-    github::giperbio/gutils
+    github::danielvartan/rutils
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3

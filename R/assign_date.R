@@ -109,7 +109,7 @@ assign_date <- function(start, end, ambiguity = 0) {
   checkmate::assert_multi_class(end, c("hms", "POSIXt"))
   checkmate::assert_numeric(as.numeric(hms::as_hms(end)),
                             lower = 0, upper = 86400)
-  gutils:::assert_identical(start, end, type = "length")
+  rutils:::assert_identical(start, end, type = "length")
   checkmate::assert_choice(ambiguity, c(0, 24, NA))
 
   start <- start |>

@@ -4,7 +4,7 @@ change_date <- function(x, date) {
 
   classes <- c("character", "Date")
   checkmate::assert_multi_class(date, classes)
-  gutils:::assert_length_one(date)
+  rutils:::assert_length_one(date)
 
   lubridate::date(x) <- date
 

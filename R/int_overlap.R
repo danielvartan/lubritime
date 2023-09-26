@@ -31,7 +31,7 @@ int_overlap <- function(int_1, int_2) {
 
 get_int_overlap <- function(int_1, int_2) {
   if (isFALSE(lubridate::int_overlaps(int_1, int_2))) {
-    return(gutils::na_as(int_1))
+    return(rutils::na_as(int_1))
   } else {
     int_start <- dplyr::if_else(
       lubridate::int_start(int_1) >= lubridate::int_start(int_2),

@@ -182,7 +182,7 @@ int_build <- function(x, y, method = "shorter") {
   checkmate::assert_multi_class(y, c("hms", "POSIXt"))
   checkmate::assert_numeric(as.numeric(hms::as_hms(y)), lower = 0,
                             upper = 86400)
-  gutils:::assert_identical(x, y, type = "length")
+  rutils:::assert_identical(x, y, type = "length")
   checkmate::assert_choice(method, method_choices)
 
   x <- x |>
@@ -195,7 +195,7 @@ int_build <- function(x, y, method = "shorter") {
     as.POSIXct() |>
     flat_posixt()
 
-  list2env(gutils:::swap(x, y, x > y), envir = environment())
+  list2env(rutils:::swap(x, y, x > y), envir = environment())
 
   x1_y1_interval <- lubridate::interval(x, y)
   y1_x2_interval <- lubridate::interval(y, x + lubridate::days())
@@ -220,7 +220,7 @@ int_build <- function(x, y, method = "shorter") {
     flags <- which(x1_y1_interval == y1_x2_interval) # nolint
 
     cli::cli_alert_warning(paste0(
-      "Element{?s} {gutils:::single_quote_(as.character(flags))} of 'x' ",
+      "Element{?s} {rutils:::single_quote_(as.character(flags))} of 'x' ",
       "and 'y' have intervals equal to 12 hours, i.e., ",
       "there's no shorter or longer interval ",
       "between the two hours (they are equal). Only one ",

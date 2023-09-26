@@ -49,7 +49,7 @@ test_that("int_build() | vector test", {
     lubridate::ymd_hms("1970-01-02 04:15:00")
   ),
   lubridate::as.interval(
-    lubridate::ymd_hms("1970-01-01 09:00:00"), #nolint
+    lubridate::ymd_hms("1970-01-01 09:00:00"), # nolint
     lubridate::ymd_hms("1970-01-01 12:00:00"))
   ))
 })
@@ -125,7 +125,7 @@ test_that("shorter_int() | general test", {
     y = lubridate::parse_date_time("11:45:00", "HMS")
   ),
   lubridate::as.interval(
-    lubridate::ymd_hms("1970-01-01 01:10:00"), #nolint
+    lubridate::ymd_hms("1970-01-01 01:10:00"), # nolint
     lubridate::ymd_hms("1970-01-01 11:45:00"))
   )
 
@@ -157,7 +157,7 @@ test_that("longer_int() | general test", {
     y = lubridate::parse_date_time("11:45:00", "HMS")
   ),
   lubridate::as.interval(
-    lubridate::ymd_hms("1970-01-01 11:45:00"), #nolint
+    lubridate::ymd_hms("1970-01-01 11:45:00"), # nolint
     lubridate::ymd_hms("1970-01-02 01:10:00"))
   )
 

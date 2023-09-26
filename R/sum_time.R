@@ -295,7 +295,7 @@ sum_time_build <- function(..., vectorize = FALSE, cycle = NULL,
   checkmate::assert_flag(na_rm)
 
   if (isTRUE(vectorize) &&
-      !(length(unique(vapply(out, length, integer(1)))) == 1)) { #nolint
+      !(length(unique(vapply(out, length, integer(1)))) == 1)) { # nolint
     cli::cli_abort("All values in '...' must have the same length.")
   }
 

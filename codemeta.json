@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.2 (2022-10-31 ucrt)",
+  "runtimePlatform": "R version 4.3.1 (2023-06-16 ucrt)",
   "author": [
     {
       "@type": "Person",
@@ -125,7 +125,7 @@
       "@type": "SoftwareApplication",
       "identifier": "stats",
       "name": "stats",
-      "version": ">= 4.1.0"
+      "version": ">= 4.2.0"
     },
     {
       "@type": "SoftwareApplication",
@@ -146,7 +146,7 @@
       "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
-      "version": ">= 4.1"
+      "version": ">= 4.2"
     },
     "2": {
       "@type": "SoftwareApplication",
@@ -189,12 +189,6 @@
     },
     "5": {
       "@type": "SoftwareApplication",
-      "identifier": "gutils",
-      "name": "gutils",
-      "sameAs": "https://github.com/giperbio/gutils"
-    },
-    "6": {
-      "@type": "SoftwareApplication",
       "identifier": "hms",
       "name": "hms",
       "version": ">= 1.1.2",
@@ -206,7 +200,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=hms"
     },
-    "7": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "lifecycle",
       "name": "lifecycle",
@@ -219,7 +213,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=lifecycle"
     },
-    "8": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "lubridate",
       "name": "lubridate",
@@ -232,9 +226,15 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=lubridate"
     },
+    "8": {
+      "@type": "SoftwareApplication",
+      "identifier": "rutils",
+      "name": "rutils",
+      "sameAs": "https://github.com/danielvartan/rutils"
+    },
     "SystemRequirements": null
   },
-  "fileSize": "130.406KB",
+  "fileSize": "128.883KB",
   "citation": [
     {
       "@type": "CreativeWork",
@@ -254,8 +254,8 @@
     }
   ],
   "releaseNotes": "https://github.com/giperbio/lubritime/blob/master/NEWS.md",
-  "readme": "https://github.com/giperbio/lubritime/blob/main/README.md",
-  "contIntegration": ["https://github.com/giperbio/lubritime/actions", "https://codecov.io/gh/giperbio/lubritime?branch=main"],
+  "readme": "https://github.com/danielvartan/lubritime/blob/main/README.md",
+  "contIntegration": ["https://github.com/giperbio/lubritime/actions", "https://app.codecov.io/gh/giperbio/lubritime?branch=main"],
   "developmentStatus": ["https://www.repostatus.org/#wip", "https://lifecycle.r-lib.org/articles/stages.html#experimental"],
   "keywords": ["r-package", "time", "r", "rstats"]
 }
