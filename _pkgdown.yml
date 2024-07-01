@@ -32,6 +32,11 @@ reference:
   - cycle_time
   - shorter_int
 
+reference:
+- title: Intervals
+  contents:
+  - int_duration
+
 - title: Utilities
   contents:
   - round_time
