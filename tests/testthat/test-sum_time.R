@@ -217,7 +217,7 @@ test_that("vct_sum_time()| circular test", {
 })
 
 test_that("sum_time_build() | error test", {
-  # lapply(out, checkmate::assert_multi_class, classes)
+  # lapply(out, prettycheck:::assert_multi_class, classes)
   expect_error(sum_time_build(
     1, vectorize = FALSE, cycle = NULL, reverse = TRUE, na_rm = FALSE
   ),
@@ -231,14 +231,14 @@ test_that("sum_time_build() | error test", {
   "Assertion on 'X\\[\\[i\\]\\]' failed"
   )
 
-  # checkmate::assert_flag(vectorize)
+  # prettycheck:::assert_flag(vectorize)
   expect_error(sum_time_build(
     hms::hms(1), vectorize = "", cycle = NULL, reverse = TRUE, na_rm = TRUE
   ),
   "Assertion on 'vectorize' failed"
   )
 
-  # checkmate::assert_multi_class(cycle, c("numeric", "Duration"),
+  # prettycheck:::assert_multi_class(cycle, c("numeric", "Duration"),
   #                               null.ok = TRUE)
   expect_error(sum_time_build(
     hms::hms(1), vectorize = FALSE, cycle = "", reverse = TRUE,
@@ -247,7 +247,7 @@ test_that("sum_time_build() | error test", {
   "Assertion on 'cycle' failed"
   )
 
-  # checkmate::assert_number(cycle, lower = 0, null.ok = TRUE)
+  # prettycheck:::assert_number(cycle, lower = 0, null.ok = TRUE)
 
   expect_error(sum_time_build(
     hms::hms(1), vectorize = FALSE, cycle = -1, reverse = TRUE,
@@ -263,7 +263,7 @@ test_that("sum_time_build() | error test", {
   "Assertion on 'cycle' failed"
   )
 
-  # checkmate::assert_flag(reverse)
+  # prettycheck:::assert_flag(reverse)
 
   expect_error(sum_time_build(
     hms::hms(1), vectorize = FALSE, cycle = NULL, reverse = 1, na_rm = TRUE
@@ -271,7 +271,7 @@ test_that("sum_time_build() | error test", {
   "Assertion on 'reverse' failed"
   )
 
-  # checkmate::assert_flag(na_rm)
+  # prettycheck:::assert_flag(na_rm)
   expect_error(sum_time_build(
     hms::hms(1), vectorize = FALSE, cycle = NULL, reverse = TRUE,
     na_rm = ""

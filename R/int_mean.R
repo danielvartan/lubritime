@@ -1,9 +1,9 @@
 int_mean <- function(start, end, ambiguity = 24) {
   classes <- c("Duration", "difftime", "hms", "POSIXct", "POSIXlt")
 
-  checkmate::assert_multi_class(start, classes)
-  checkmate::assert_multi_class(end, classes)
-  checkmate::assert_choice(ambiguity, c(0, 24, NA))
+  prettycheck:::assert_multi_class(start, classes)
+  prettycheck:::assert_multi_class(end, classes)
+  prettycheck:::assert_choice(ambiguity, c(0, 24, NA))
 
   start <- cycle_time(hms::hms(extract_seconds(start)),
                       cycle = lubridate::ddays())

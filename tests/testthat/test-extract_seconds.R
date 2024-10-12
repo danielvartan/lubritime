@@ -23,6 +23,6 @@ test_that("extract_seconds() | general test", {
 })
 
 test_that("extract_seconds() | error test", {
-  # checkmate::assert_multi_class(x, classes)
+  # prettycheck:::assert_multi_class(x, classes)
   expect_error(extract_seconds(x = 1), "Assertion on 'x' failed")
 })

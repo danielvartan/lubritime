@@ -176,14 +176,14 @@ longer_duration <- function(x, y) {
 int_build <- function(x, y, method = "shorter") {
   method_choices <- c("shorter", "longer")
 
-  checkmate::assert_multi_class(x, c("hms", "POSIXt"))
-  checkmate::assert_numeric(as.numeric(hms::as_hms(x)), lower = 0,
+  prettycheck:::assert_multi_class(x, c("hms", "POSIXt"))
+  prettycheck:::assert_numeric(as.numeric(hms::as_hms(x)), lower = 0,
                             upper = 86400)
-  checkmate::assert_multi_class(y, c("hms", "POSIXt"))
-  checkmate::assert_numeric(as.numeric(hms::as_hms(y)), lower = 0,
+  prettycheck:::assert_multi_class(y, c("hms", "POSIXt"))
+  prettycheck:::assert_numeric(as.numeric(hms::as_hms(y)), lower = 0,
                             upper = 86400)
-  rutils:::assert_identical(x, y, type = "length")
-  checkmate::assert_choice(method, method_choices)
+  prettycheck:::assert_identical(x, y, type = "length")
+  prettycheck:::assert_choice(method, method_choices)
 
   x <- x |>
     hms::as_hms() |>

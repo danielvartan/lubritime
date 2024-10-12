@@ -25,7 +25,8 @@ Imports:
     hms (>= 1.1.2),
     lifecycle (>= 1.0.3),
     lubridate (>= 1.9.2),
-    rutils
+    rutils,
+    stringdist (>= 0.9.12),
 Suggests: 
     covr (>= 3.6.1),
     knitr (>= 1.42),
@@ -36,12 +37,11 @@ Suggests:
     stats (>= 4.2.0),
     testthat (>= 3.1.6)
 Remotes: 
+    github::danielvartan/prettycheck,
     github::danielvartan/rutils
-VignetteBuilder: 
-    knitr
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2

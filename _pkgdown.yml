@@ -14,7 +14,10 @@ navbar:
     - reference
     - articles
     - news
-    right: github
+    right:
+    - search
+    - lightswitch
+    - github
   components:
     home: ~
     intro: ~
@@ -32,12 +35,17 @@ reference:
   - cycle_time
   - shorter_int
 
+- title: Dates
+  contents:
+  - change_date
+
 - title: Intervals
   contents:
   - int_duration
 
 - title: Utilities
   contents:
+  - convert_to_unit
   - round_time
 
 authors:

@@ -59,14 +59,14 @@ test_that("assign_date() | `ambiguity` test", {
 })
 
 test_that("assign_date() | error test", {
-  # checkmate::assert_multi_class(start, c("hms", "POSIXt"))
+  # prettycheck:::assert_multi_class(start, c("hms", "POSIXt"))
   expect_error(assign_date(
     start = 1, end = hms::hms(1), ambiguity = 0
   ),
   "Assertion on 'start' failed"
   )
 
-  # checkmate::assert_numeric(as.numeric(hms::as_hms(start)),
+  # prettycheck:::assert_numeric(as.numeric(hms::as_hms(start)),
   #                           lower = 0, upper = 86400)
   expect_error(assign_date(
     start = hms::hms(-1), end = hms::hms(1), ambiguity = 0
@@ -80,13 +80,13 @@ test_that("assign_date() | error test", {
   "Assertion on 'as.numeric\\(hms::as_hms\\(start\\)\\)' failed"
   )
 
-  # checkmate::assert_multi_class(end, c("hms", "POSIXt"))
+  # prettycheck:::assert_multi_class(end, c("hms", "POSIXt"))
   expect_error(assign_date(
     start = hms::hms(1), end = 1, ambiguity = 0
   ), "Assertion on 'end' failed"
   )
 
-  # checkmate::assert_numeric(as.numeric(hms::as_hms(end)),
+  # prettycheck:::assert_numeric(as.numeric(hms::as_hms(end)),
   #                           lower = 0, upper = 86400)
   expect_error(assign_date(
     start = hms::hms(1), end = hms::hms(-1), ambiguity = 0
@@ -106,7 +106,7 @@ test_that("assign_date() | error test", {
   )
   )
 
-  # checkmate::assert_choice(ambiguity, c(0, 24 , NA))
+  # prettycheck:::assert_choice(ambiguity, c(0, 24 , NA))
   expect_error(assign_date(
     start = hms::hms(1), end = hms::hms(1), ambiguity = "x"
   ),

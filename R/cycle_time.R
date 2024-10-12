@@ -236,9 +236,9 @@ cycle_time.hms <- function(time, cycle, reverse = TRUE) {
 }
 
 cycle_time_build <- function(time, cycle, reverse) {
-  checkmate::assert_multi_class(cycle, c("numeric", "Duration"))
-  checkmate::assert_number(as.numeric(cycle), lower = 0, null.ok = FALSE)
-  checkmate::assert_flag(reverse)
+  prettycheck:::assert_multi_class(cycle, c("numeric", "Duration"))
+  prettycheck:::assert_number(as.numeric(cycle), lower = 0, null.ok = FALSE)
+  prettycheck:::assert_flag(reverse)
 
   cycle <- cycle |> as.numeric()
 

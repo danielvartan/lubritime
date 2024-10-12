@@ -1,8 +1,20 @@
+# int_1 <- lubridate::interval(
+#   start = lubridate::as_datetime("2020-01-01 00:00:00"),
+#   end = lubridate::as_datetime("2021-01-01 00:00:00"),
+# )
+#
+# int_2 <- lubridate::interval(
+#   start = lubridate::as_datetime("2020-05-01 00:00:00"),
+#   end = lubridate::as_datetime("2021-05-01 00:00:00"),
+# )
+
+# int_overlap(int_1, int_2)
+
 int_overlap <- function(int_1, int_2) {
-  checkmate::assert_class(int_1, "Interval")
-  checkmate::assert_numeric(as.numeric(int_1), len = 1)
-  checkmate::assert_class(int_2, "Interval")
-  checkmate::assert_numeric(as.numeric(int_2), min.len = 1)
+  prettycheck:::assert_class(int_1, "Interval")
+  prettycheck:::assert_numeric(as.numeric(int_1), len = 1)
+  prettycheck:::assert_class(int_2, "Interval")
+  prettycheck:::assert_numeric(as.numeric(int_2), min.len = 1)
 
   ## Similar to watching a planet travelling in front of its star
 

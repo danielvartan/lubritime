@@ -37,9 +37,10 @@
 #' )
 #' #> [1] "3d 14h 2m 0s" "2d 14h 2m 0s" # Expected
 int_duration <- function(start, end) {
-  checkmate::assert_posixct(start)
-  checkmate::assert_posixct(end)
+  prettycheck:::assert_posixct(start)
+  prettycheck:::assert_posixct(end)
 
-  lubridate::interval(start, end, tzone = lubridate::tz(start)) |>
+  start |>
+    lubridate::interval(end, tzone = lubridate::tz(start)) |>
     lubridate::as.period()
 }

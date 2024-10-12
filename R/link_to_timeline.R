@@ -1,6 +1,6 @@
 link_to_timeline <- function(x, threshold = hms::parse_hms("12:00:00")) {
-  checkmate::assert_multi_class(x, c("hms", "POSIXt"))
-  rutils:::assert_hms(
+  prettycheck:::assert_multi_class(x, c("hms", "POSIXt"))
+  prettycheck:::assert_hms(
     threshold, lower = hms::hms(0), upper = hms::parse_hms("23:59:59")
   )
 

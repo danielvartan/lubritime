@@ -286,13 +286,13 @@ sum_time_build <- function(..., vectorize = FALSE, cycle = NULL,
   classes <- c("Duration", "difftime", "hms", "POSIXct", "POSIXlt",
                "Interval")
 
-  lapply(out, checkmate::assert_multi_class, classes)
-  checkmate::assert_flag(vectorize)
-  checkmate::assert_multi_class(cycle, c("numeric", "Duration"),
+  lapply(out, prettycheck:::assert_multi_class, classes)
+  prettycheck:::assert_flag(vectorize)
+  prettycheck:::assert_multi_class(cycle, c("numeric", "Duration"),
                                 null.ok = TRUE)
-  checkmate::assert_number(cycle, lower = 0, null.ok = TRUE)
-  checkmate::assert_flag(reverse)
-  checkmate::assert_flag(na_rm)
+  prettycheck:::assert_number(cycle, lower = 0, null.ok = TRUE)
+  prettycheck:::assert_flag(reverse)
+  prettycheck:::assert_flag(na_rm)
 
   if (isTRUE(vectorize) &&
       !(length(unique(vapply(out, length, integer(1)))) == 1)) { # nolint

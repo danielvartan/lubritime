@@ -39,6 +39,6 @@ test_that("round_time() | vector test", {
 })
 
 test_that("round_time() | error test", {
-  # checkmate::assert_multi_class(x, classes)
+  # prettycheck:::assert_multi_class(x, classes)
   expect_error(round_time(1), "Assertion on 'x' failed")
 })

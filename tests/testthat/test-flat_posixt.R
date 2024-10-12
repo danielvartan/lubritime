@@ -29,7 +29,7 @@ test_that("flat_posixct() | error test", {
   "Assertion on 'posixt' failed"
   )
 
-  # checkmate::assert_date(base, len = 1, all.missing = FALSE)
+  # prettycheck:::assert_date(base, len = 1, all.missing = FALSE)
   expect_error(flat_posixt(
     posixt = lubridate::as_datetime(1), base = "", force_tz = TRUE,
     tz = "UTC"
@@ -52,7 +52,7 @@ test_that("flat_posixct() | error test", {
   "Assertion on 'base' failed"
   )
 
-  # checkmate::assert_flag(force_tz)
+  # prettycheck:::assert_flag(force_tz)
   expect_error(flat_posixt(
     posixt = lubridate::as_datetime(1), base = as.Date("1970-01-01"),
     force_tz = 1, tz = "UTC"
@@ -60,7 +60,7 @@ test_that("flat_posixct() | error test", {
   "Assertion on 'force_tz' failed"
   )
 
-  # checkmate::assert_choice(tz, OlsonNames())
+  # prettycheck:::assert_choice(tz, OlsonNames())
   expect_error(flat_posixt(
     posixt = lubridate::as_datetime(1), base = as.Date("1970-01-01"),
     force_tz = TRUE, tz = ""
@@ -83,7 +83,7 @@ test_that("flat_posixt_date() | error test", {
   expect_error(flat_posixt_date(posixt = "", base = as.Date("1970-01-01")),
                "Assertion on 'posixt' failed")
 
-  # checkmate::assert_date(base, len = 1, any.missing = FALSE)
+  # prettycheck:::assert_date(base, len = 1, any.missing = FALSE)
   expect_error(
     flat_posixt_date(posixt = Sys.time(), base = ""),
     "Assertion on 'base' failed"

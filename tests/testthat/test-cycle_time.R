@@ -214,7 +214,7 @@ test_that("cycle_time.hms() | vector test", {
 })
 
 test_that("cycle_time_build() | error test", {
-  # checkmate::assert_multi_class(cycle, c("numeric", "Duration"))
+  # prettycheck:::assert_multi_class(cycle, c("numeric", "Duration"))
   expect_error(cycle_time_build(
     time = 1, cycle = "a", reverse = FALSE
   ),
@@ -227,7 +227,7 @@ test_that("cycle_time_build() | error test", {
   "Assertion on 'cycle' failed"
   )
 
-  # checkmate::assert_number(as.numeric(cycle), lower = 0, null.ok = FALSE)
+  # prettycheck:::assert_number(as.numeric(cycle), lower = 0, null.ok = FALSE)
 
   expect_error(cycle_time_build(
     time = 1, cycle = -1, reverse = FALSE
@@ -235,7 +235,7 @@ test_that("cycle_time_build() | error test", {
   "Assertion on 'as.numeric\\(cycle\\)' failed"
   )
 
-  # checkmate::assert_flag(reverse)
+  # prettycheck:::assert_flag(reverse)
   expect_error(cycle_time_build(
     time = 1, cycle = 1, reverse = 1
   ),

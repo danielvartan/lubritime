@@ -15,20 +15,20 @@ test_that("int_mean() | general test", {
 })
 
 test_that("int_mean() | error test", {
-  # checkmate::assert_multi_class(start, classes)
+  # prettycheck:::assert_multi_class(start, classes)
   expect_error(int_mean(
     start = 1, end = hms::hms(1), ambiguity = 24
   ),
   "Assertion on 'start' failed"
   )
 
-  # checkmate::assert_multi_class(end, classes)
+  # prettycheck:::assert_multi_class(end, classes)
   expect_error(int_mean(
     start = hms::hms(1), end = 1, ambiguity = 24
   ), "Assertion on 'end' failed"
   )
 
-  # checkmate::assert_choice(ambiguity, c(0, 24 , NA))
+  # prettycheck:::assert_choice(ambiguity, c(0, 24 , NA))
   expect_error(int_mean(
     start = hms::hms(1), end = hms::hms(1), ambiguity = 1
   ),

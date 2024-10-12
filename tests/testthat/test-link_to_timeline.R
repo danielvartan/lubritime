@@ -29,13 +29,13 @@ test_that("link_to_timeline() | general test", {
 })
 
 test_that("link_to_timeline() | error test", {
-  # checkmate::assert_multi_class(x, c("hms", "POSIXt"))
+  # prettycheck:::assert_multi_class(x, c("hms", "POSIXt"))
   link_to_timeline(
     x = 1, threshold = hms::parse_hms("12:00:00")
   ) |>
     expect_error("Assertion on 'x' failed")
 
-  # rutils:::assert_hms(
+  # prettycheck:::assert_hms(
   #     threshold, lower = hms::hms(0), upper = hms::parse_hms("23:59:59")
   # )
   link_to_timeline(

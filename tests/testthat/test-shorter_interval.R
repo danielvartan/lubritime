@@ -55,14 +55,14 @@ test_that("int_build() | vector test", {
 })
 
 test_that("int_build() | error test", {
-  # checkmate::assert_multi_class(x, c("hms", "POSIXt"))
+  # prettycheck:::assert_multi_class(x, c("hms", "POSIXt"))
   expect_error(int_build(
     x = 1, y = hms::hms(1), method = "shorter"
   ),
   "Assertion on 'x' failed"
   )
 
-  # checkmate::assert_numeric(as.numeric(hms::as_hms(x)), lower = 0,
+  # prettycheck:::assert_numeric(as.numeric(hms::as_hms(x)), lower = 0,
   #                           upper = 86400)
   expect_error(int_build(
     x = hms::hms(-1), y = hms::hms(1), method = "shorter"
@@ -76,14 +76,14 @@ test_that("int_build() | error test", {
   "Assertion on 'as.numeric\\(hms::as_hms\\(x\\)\\)' failed"
   )
 
-  # checkmate::assert_multi_class(y, c("hms", "POSIXt"))
+  # prettycheck:::assert_multi_class(y, c("hms", "POSIXt"))
   expect_error(int_build(
     x = hms::hms(1), y = 1, method = "shorter"
   ),
   "Assertion on 'y' failed"
   )
 
-  # checkmate::assert_numeric(as.numeric(hms::as_hms(x)), lower = 0,
+  # prettycheck:::assert_numeric(as.numeric(hms::as_hms(x)), lower = 0,
   #                           upper = 86400)
   expect_error(int_build(
     x = hms::hms(1), y = hms::hms(-1), method = "shorter"
@@ -102,7 +102,7 @@ test_that("int_build() | error test", {
     x = hms::hms(1), y = c(hms::hms(1), hms::hms(1)), method = "shorter"
   ))
 
-  # checkmate::assert_choice(method, method_choices)
+  # prettycheck:::assert_choice(method, method_choices)
   expect_error(int_build(
     x = hms::hms(1), y = hms::hms(1), method = 1
   ),
