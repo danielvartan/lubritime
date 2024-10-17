@@ -115,7 +115,7 @@
 #   "Assertion on 'posixt' failed"
 #   )
 #
-#   # assert_hms(base, any.missing = FALSE)
+#   # assert_hms(base, any_missing = FALSE)
 #   expect_error(
 #     flat_posixt_hour(posixt = Sys.time(), base = ""),
 #     "Assertion on 'base' failed"

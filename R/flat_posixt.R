@@ -23,7 +23,7 @@ flat_posixt_date <- function(posixt, base = as.Date("1970-01-01")) {
 
 flat_posixt_hour <- function(posixt, base = hms::parse_hms("00:00:00")) {
   prettycheck:::assert_posixt(posixt)
-  prettycheck:::assert_hms(base, any.missing = FALSE)
+  prettycheck:::assert_hms(base, any_missing = FALSE)
 
   posixt |>
     lubridate::date() |>

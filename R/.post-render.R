@@ -42,4 +42,6 @@ codemetar::write_codemeta()
 
 # Check if the script ran successfully -----
 
-# beepr::beep(1)
+beepr::beep(1)
+
+Sys.sleep(3)

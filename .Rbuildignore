@@ -17,4 +17,5 @@
 ^man-roxygen$
 ^Meta$
 ^pkgdown$
+^R/\.post-render\.R$
 ^README\.qmd$
