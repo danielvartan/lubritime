@@ -6,7 +6,7 @@ timeline."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/m
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--></head><body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-reference-topic">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -32,22 +32,22 @@ timeline."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/m
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
-  <a href="https://github.com/giperbio/lubritime/" class="external-link">
+  <a href="https://github.com/danielvartan/lubritime/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Assign dates to two sequential hours</h1>
-    <small class="dont-index">Source: <a href="https://github.com/giperbio/lubritime/blob/HEAD/R/assign_date.R" class="external-link"><code>R/assign_date.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/danielvartan/lubritime/blob/main/R/assign_date.R" class="external-link"><code>R/assign_date.R</code></a></small>
     <div class="hidden name"><code>assign_date.Rd</code></div>
     </div>
 
@@ -64,12 +64,14 @@ timeline.</p>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>start, end</dt>
+
+
+<dl><dt id="arg-start-end">start, end<a class="anchor" aria-label="anchor" href="#arg-start-end"></a></dt>
 <dd><p>An <code><a href="https://hms.tidyverse.org/reference/hms.html" class="external-link">hms</a></code> or <code><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">POSIXt</a></code>
 object indicating the start or end hour.</p></dd>
 
 
-<dt>ambiguity</dt>
+<dt id="arg-ambiguity">ambiguity<a class="anchor" aria-label="anchor" href="#arg-ambiguity"></a></dt>
 <dd><p>(optional) a <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> or <code>NA</code> value to
 instruct <code>assign_date()</code> on how to deal with ambiguities. See the Details
 section to learn more (default: <code>0</code>).</p></dd>
@@ -77,15 +79,11 @@ section to learn more (default: <code>0</code>).</p></dd>
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    
-
-<p>A <code>start</code>--<code>end</code></p>
-<p></p>
-<p><code><a href="https://lubridate.tidyverse.org/reference/interval.html" class="external-link">Interval</a></code> object.</p>
+    <p>A <code>start</code>–<code>end</code> <code><a href="https://lubridate.tidyverse.org/reference/interval.html" class="external-link">Interval</a></code> object.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
-    
+
 <div class="section">
 <h3 id="ambiguity-argument"><code>ambiguity</code> argument<a class="anchor" aria-label="anchor" href="#ambiguity-argument"></a></h3>
 
@@ -142,7 +140,7 @@ if <code>start</code> or <code>end</code> are <code>NA</code>.</p>
     </div>
     <div id="see-also">
     <h2>See also</h2>
-    <div class="dont-index"><p>Other circular time functions: 
+    <div class="dont-index"><p>Other circular time functions:
 <code><a href="cycle_time.html">cycle_time</a>()</code>,
 <code><a href="shorter_int.html">shorter_int</a>()</code></p></div>
     </div>
@@ -200,15 +198,15 @@ if <code>start</code> or <code>end</code> are <code>NA</code>.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
       </footer></div>
 
-  
 
 
-  
+
+
 
   </body></html>
 

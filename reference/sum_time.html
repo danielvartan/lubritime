@@ -9,7 +9,7 @@ learn more)."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/lib
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--></head><body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-reference-topic">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -35,22 +35,22 @@ learn more)."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/lib
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
-  <a href="https://github.com/giperbio/lubritime/" class="external-link">
+  <a href="https://github.com/danielvartan/lubritime/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Sum time objects</h1>
-    <small class="dont-index">Source: <a href="https://github.com/giperbio/lubritime/blob/HEAD/R/sum_time.R" class="external-link"><code>R/sum_time.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/danielvartan/lubritime/blob/main/R/sum_time.R" class="external-link"><code>R/sum_time.R</code></a></small>
     <div class="hidden name"><code>sum_time.Rd</code></div>
     </div>
 
@@ -72,27 +72,29 @@ learn more).</p>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>...</dt>
+
+
+<dl><dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
 <dd><p>Objects belonging to one of the following classes:
 <code><a href="https://lubridate.tidyverse.org/reference/duration.html" class="external-link">Duration</a></code>, <code><a href="https://rdrr.io/r/base/difftime.html" class="external-link">difftime</a></code>, or
 <code><a href="https://hms.tidyverse.org/reference/hms.html" class="external-link">hms</a></code>, <code><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">POSIXct</a></code>,
 <code><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">POSIXlt</a></code>, or <code><a href="https://lubridate.tidyverse.org/reference/interval.html" class="external-link">Interval</a></code>.</p></dd>
 
 
-<dt>cycle</dt>
+<dt id="arg-cycle">cycle<a class="anchor" aria-label="anchor" href="#arg-cycle"></a></dt>
 <dd><p>(optional) A <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></code> or
 <code><a href="https://lubridate.tidyverse.org/reference/duration.html" class="external-link">Duration</a></code> object of length 1, equal or greater
 than 0, indicating the cycle length in seconds. If <code>NULL</code> the function will
 perform a linear sum (see Details to learn more) (default: <code>NULL</code>).</p></dd>
 
 
-<dt>reverse</dt>
+<dt id="arg-reverse">reverse<a class="anchor" aria-label="anchor" href="#arg-reverse"></a></dt>
 <dd><p>(optional) A <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> value indicating if
 the function must use a reverse cycle for negative sums (see Details to
 learn more) (default: <code>TRUE</code>).</p></dd>
 
 
-<dt>na_rm</dt>
+<dt id="arg-na-rm">na_rm<a class="anchor" aria-label="anchor" href="#arg-na-rm"></a></dt>
 <dd><p>(optional) a <code><a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a></code> value indicating if
 the function must remove <code>NA</code> values while performing the sum (default:
 <code>FALSE</code>).</p></dd>
@@ -100,7 +102,6 @@ the function must remove <code>NA</code> values while performing the sum (defaul
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    
 
 <ul><li><p>If <code>cycle = NULL</code>, a <code><a href="https://lubridate.tidyverse.org/reference/duration.html" class="external-link">Duration</a></code> object with a
 linear sum of the time from objects in <code>...</code>.</p></li>
@@ -109,7 +110,7 @@ circular sum of the time from objects in <code>...</code>.</p></li>
 </ul></div>
     <div id="details">
     <h2>Details</h2>
-    
+
 <div class="section">
 <h3 id="sum-time-versus-vct-sum-time-"><code>sum_time()</code> versus <code>vct_sum_time()</code><a class="anchor" aria-label="anchor" href="#sum-time-versus-vct-sum-time-"></a></h3>
 
@@ -362,15 +363,15 @@ it must be considered when doing time arithmetic.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
       </footer></div>
 
-  
 
 
-  
+
+
 
   </body></html>
 

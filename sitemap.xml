@@ -1,51 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://giperbio.github.io/lubritime/404.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/index.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/reference/assign_date.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/reference/cycle_time.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/reference/int_duration.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/reference/lubritime-package.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/reference/round_time.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/reference/shorter_int.html</loc>
-  </url>
-  <url>
-    <loc>https://giperbio.github.io/lubritime/reference/sum_time.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://danielvartan.github.io/lubritime/404.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/CONTRIBUTING.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/LICENSE-text.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/LICENSE.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/authors.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/index.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/news/index.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/assign_date.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/change_date.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/convert_to_unit.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/cycle_time.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/index.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/int_duration.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/lubritime-package.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/round_time.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/shorter_int.html</loc></url>
+<url><loc>https://danielvartan.github.io/lubritime/reference/sum_time.html</loc></url>
 </urlset>
+
