@@ -11,7 +11,7 @@
 #' `convert_to_unit()` can handle.
 #'
 #' @param x A [`numeric`][base::is.numeric()] object.
-#' @param from A string indicationg the unit of `x` (see
+#' @param from A string indicating the unit of `x` (see
 #'   the *Units* section to learn more) (default: `"seconds"`).
 #' @param to (optional) a string indicating the desire output unit
 #'   (see the *Units* section to learn more) (default: `"hours"`).

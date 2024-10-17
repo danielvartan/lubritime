@@ -1,6 +1,6 @@
 flat_posixt <- function(posixt, base = as.Date("1970-01-01"),
                         force_tz = TRUE, tz = "UTC") {
-  prettycheck:::assert_posixt(posixt, null.ok = FALSE)
+  prettycheck:::assert_posixt(posixt, null_ok = FALSE)
   prettycheck:::assert_date(base, len = 1, all.missing = FALSE)
   prettycheck:::assert_flag(force_tz)
   prettycheck:::assert_choice(tz, OlsonNames())
@@ -15,7 +15,7 @@ flat_posixt <- function(posixt, base = as.Date("1970-01-01"),
 }
 
 flat_posixt_date <- function(posixt, base = as.Date("1970-01-01")) {
-  prettycheck:::assert_posixt(posixt, null.ok = FALSE)
+  prettycheck:::assert_posixt(posixt, null_ok = FALSE)
   prettycheck:::assert_date(base, len = 1, any.missing = FALSE)
 
   posixt |> lubridate::`date<-`(base) |> c()

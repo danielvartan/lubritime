@@ -1,4 +1,3 @@
-library(checkmate)
 library(dplyr)
 library(hms)
 library(lubridate)
@@ -8,6 +7,8 @@ library(rlang)
 library(testthat)
 
 testthat::test_check("lubritime")
+
+# To do: Check tests!
 
 # # For development use only (comment the code after use (Ctrl + Shift + C)).
 #

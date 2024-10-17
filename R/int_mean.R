@@ -9,7 +9,7 @@ int_mean <- function(start, end, ambiguity = 24) {
                       cycle = lubridate::ddays())
   end <- cycle_time(hms::hms(extract_seconds(end)),
                     cycle = lubridate::ddays())
-  interval <- rutils:::shush(assign_date(start, end, ambiguity = ambiguity))
+  interval <- rutils::shush(assign_date(start, end, ambiguity = ambiguity))
   mean <- as.numeric(start) + (as.numeric(interval) / 2)
 
   hms::hms(mean)

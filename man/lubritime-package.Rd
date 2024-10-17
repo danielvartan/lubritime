@@ -11,9 +11,9 @@ An extension for the 'lubridate' package from tidyverse, adding new features to 
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://giperbio.github.io/lubritime/}
-  \item \url{https://github.com/giperbio/lubritime/}
-  \item Report bugs at \url{https://github.com/giperbio/lubritime/issues/}
+  \item \url{https://danielvartan.github.io/lubritime/}
+  \item \url{https://github.com/danielvartan/lubritime/}
+  \item Report bugs at \url{https://github.com/danielvartan/lubritime/issues/}
 }
 
 }

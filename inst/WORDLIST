@@ -1,10 +1,6 @@
 CMD
 Codecov
-Coursera
 Grolemund
-Grolemund's
-Grolemund’s
-Hadley
 IEC
 Lifecycle
 Lubridate
@@ -12,7 +8,7 @@ ORCID
 WIP
 Wickham
 conceptor
-hms
 lubridate
 tidyverse
 vectorized
+yaml

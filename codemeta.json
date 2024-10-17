@@ -4,9 +4,9 @@
   "identifier": "lubritime",
   "description": "An extension for the 'lubridate' package from tidyverse, adding new features to deal with temporal objects.",
   "name": "lubritime: An Extension for the Lubridate Package",
-  "relatedLink": "https://giperbio.github.io/lubritime/",
-  "codeRepository": "https://github.com/giperbio/lubritime/",
-  "issueTracker": "https://github.com/giperbio/lubritime/issues/",
+  "relatedLink": "https://danielvartan.github.io/lubritime/",
+  "codeRepository": "https://github.com/danielvartan/lubritime/",
+  "issueTracker": "https://github.com/danielvartan/lubritime/issues/",
   "license": "https://spdx.org/licenses/MIT",
   "version": "0.0.0.9000",
   "programmingLanguage": {
@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.3.1 (2023-06-16 ucrt)",
+  "runtimePlatform": "R version 4.4.1 (2024-06-14 ucrt)",
   "author": [
     {
       "@type": "Person",
@@ -47,7 +47,7 @@
       "@type": "SoftwareApplication",
       "identifier": "covr",
       "name": "covr",
-      "version": ">= 3.6.1",
+      "version": ">= 3.6.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -60,7 +60,7 @@
       "@type": "SoftwareApplication",
       "identifier": "knitr",
       "name": "knitr",
-      "version": ">= 1.42",
+      "version": ">= 1.48",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -86,7 +86,7 @@
       "@type": "SoftwareApplication",
       "identifier": "rlang",
       "name": "rlang",
-      "version": ">= 1.0.6",
+      "version": ">= 1.1.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -99,7 +99,7 @@
       "@type": "SoftwareApplication",
       "identifier": "rmarkdown",
       "name": "rmarkdown",
-      "version": ">= 2.20",
+      "version": ">= 2.28",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -112,7 +112,7 @@
       "@type": "SoftwareApplication",
       "identifier": "spelling",
       "name": "spelling",
-      "version": ">= 2.2",
+      "version": ">= 2.3.1",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -125,13 +125,13 @@
       "@type": "SoftwareApplication",
       "identifier": "stats",
       "name": "stats",
-      "version": ">= 4.2.0"
+      "version": ">= 4.3"
     },
     {
       "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
-      "version": ">= 3.1.6",
+      "version": ">= 3.2.1.1",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -146,26 +146,13 @@
       "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
-      "version": ">= 4.2"
+      "version": ">= 4.3"
     },
     "2": {
       "@type": "SoftwareApplication",
-      "identifier": "checkmate",
-      "name": "checkmate",
-      "version": ">= 2.1.0",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=checkmate"
-    },
-    "3": {
-      "@type": "SoftwareApplication",
       "identifier": "cli",
       "name": "cli",
-      "version": ">= 3.6.0",
+      "version": ">= 3.6.3",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -174,11 +161,11 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=cli"
     },
-    "4": {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
-      "version": ">= 1.1.0",
+      "version": ">= 1.1.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -187,11 +174,11 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=dplyr"
     },
-    "5": {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "hms",
       "name": "hms",
-      "version": ">= 1.1.2",
+      "version": ">= 1.1.3",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -200,11 +187,11 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=hms"
     },
-    "6": {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "lifecycle",
       "name": "lifecycle",
-      "version": ">= 1.0.3",
+      "version": ">= 1.0.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -213,11 +200,11 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=lifecycle"
     },
-    "7": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "lubridate",
       "name": "lubridate",
-      "version": ">= 1.9.2",
+      "version": ">= 1.9.3",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -226,19 +213,38 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=lubridate"
     },
+    "7": {
+      "@type": "SoftwareApplication",
+      "identifier": "prettycheck",
+      "name": "prettycheck",
+      "sameAs": "https://github.com/danielvartan/prettycheck"
+    },
     "8": {
       "@type": "SoftwareApplication",
       "identifier": "rutils",
       "name": "rutils",
       "sameAs": "https://github.com/danielvartan/rutils"
     },
+    "9": {
+      "@type": "SoftwareApplication",
+      "identifier": "stringdist",
+      "name": "stringdist",
+      "version": ">= 0.9.12",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=stringdist"
+    },
     "SystemRequirements": null
   },
-  "fileSize": "128.883KB",
+  "fileSize": "148.481KB",
   "citation": [
     {
       "@type": "CreativeWork",
-      "datePublished": "2023",
+      "datePublished": "2024",
       "author": [
         {
           "@type": "Person",
@@ -249,13 +255,13 @@
         }
       ],
       "name": "{lubritime}: an extension for the {lubridate} package",
-      "url": "https://giperbio.github.io/lubritime/",
-      "description": "R package version 0.0.0.9000"
+      "url": "https://danielvartan.github.io/lubritime/",
+      "description": "R package"
     }
   ],
-  "releaseNotes": "https://github.com/giperbio/lubritime/blob/master/NEWS.md",
+  "releaseNotes": "https://github.com/danielvartan/lubritime/blob/master/NEWS.md",
   "readme": "https://github.com/danielvartan/lubritime/blob/main/README.md",
-  "contIntegration": ["https://github.com/giperbio/lubritime/actions", "https://app.codecov.io/gh/giperbio/lubritime?branch=main"],
+  "contIntegration": ["https://github.com/danielvartan/lubritime/actions/workflows/check-standard.yaml", "https://app.codecov.io/gh/danielvartan/lubritime?branch=main"],
   "developmentStatus": ["https://www.repostatus.org/#wip", "https://lifecycle.r-lib.org/articles/stages.html#experimental"],
   "keywords": ["r-package", "time", "r", "rstats"]
 }

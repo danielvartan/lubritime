@@ -14,19 +14,19 @@ utils::bibentry(
             comment = c(ORCID = "0000-0001-7782-759X")
             )
         ),
-    year = "2023",
+    year = "2024",
     url = paste0(
-        "https://giperbio.github.io/",
+        "https://danielvartan.github.io/",
         "lubritime/"
         ),
-    note = "R package version 0.0.0.9000",
+    note = "R package",
     textVersion = paste0(
         "Vartanian, D.", " ",
-        "(2023)",  ". ",
+        "(2024)",  ". ",
         "{lubritime}:", " ",
         "an extension for the {lubridate} package", ". ",
-        "R package version 0.0.0.9000", ". ",
-        "https://giperbio.github.io/",
+        "R package", ". ",
+        "https://danielvartan.github.io/",
         "lubritime/"
         )
     )

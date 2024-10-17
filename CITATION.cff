@@ -1,7 +1,7 @@
-# -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.5.0
+# --------------------------------------------
+# CITATION file created with {cffr} R package
 # See also: https://docs.ropensci.org/cffr/
-# -----------------------------------------------------------
+# --------------------------------------------
  
 cff-version: 1.2.0
 message: 'To cite package "lubritime" in publications use:'
@@ -9,6 +9,9 @@ type: software
 license: MIT
 title: 'lubritime: An Extension for the Lubridate Package'
 version: 0.0.0.9000
+identifiers:
+- type: url
+  value: https://github.com/danielvartan/lubritime/
 abstract: An extension for the 'lubridate' package from tidyverse, adding new features
   to deal with temporal objects.
 authors:
@@ -24,11 +27,11 @@ preferred-citation:
     given-names: Daniel
     email: danvartan@gmail.com
     orcid: https://orcid.org/0000-0001-7782-759X
-  year: '2023'
-  url: https://giperbio.github.io/lubritime/
-  notes: R package version 0.0.0.9000
-repository-code: https://github.com/giperbio/lubritime/issues/
-url: https://giperbio.github.io/lubritime/
+  year: '2024'
+  url: https://danielvartan.github.io/lubritime/
+  notes: R package
+repository-code: https://github.com/danielvartan/lubritime/issues/
+url: https://danielvartan.github.io/lubritime/
 contact:
 - family-names: Vartanian
   given-names: Daniel
@@ -41,25 +44,11 @@ references:
   url: https://www.R-project.org/
   authors:
   - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2023'
   institution:
     name: R Foundation for Statistical Computing
-  version: '>= 4.2'
-- type: software
-  title: checkmate
-  abstract: 'checkmate: Fast and Versatile Argument Checks'
-  notes: Imports
-  url: https://mllg.github.io/checkmate/
-  repository: https://CRAN.R-project.org/package=checkmate
-  authors:
-  - family-names: Lang
-    given-names: Michel
-    email: michellang@gmail.com
-    orcid: https://orcid.org/0000-0001-9754-0393
-  year: '2023'
-  version: '>= 2.1.0'
+    address: Vienna, Austria
+  year: '2024'
+  version: '>= 4.3'
 - type: software
   title: cli
   abstract: 'cli: Helpers for Developing Command Line Interfaces'
@@ -70,8 +59,9 @@ references:
   - family-names: Csárdi
     given-names: Gábor
     email: csardi.gabor@gmail.com
-  year: '2023'
-  version: '>= 3.6.0'
+  year: '2024'
+  doi: 10.32614/CRAN.package.cli
+  version: '>= 3.6.3'
 - type: software
   title: dplyr
   abstract: 'dplyr: A Grammar of Data Manipulation'
@@ -95,8 +85,9 @@ references:
     given-names: Davis
     email: davis@posit.co
     orcid: https://orcid.org/0000-0003-4777-038X
-  year: '2023'
-  version: '>= 1.1.0'
+  year: '2024'
+  doi: 10.32614/CRAN.package.dplyr
+  version: '>= 1.1.4'
 - type: software
   title: hms
   abstract: 'hms: Pretty Time of Day'
@@ -108,8 +99,9 @@ references:
     given-names: Kirill
     email: kirill@cynkra.com
     orcid: https://orcid.org/0000-0002-1416-3412
-  year: '2023'
-  version: '>= 1.1.2'
+  year: '2024'
+  doi: 10.32614/CRAN.package.hms
+  version: '>= 1.1.3'
 - type: software
   title: lifecycle
   abstract: 'lifecycle: Manage the Life Cycle of your Package Functions'
@@ -119,13 +111,14 @@ references:
   authors:
   - family-names: Henry
     given-names: Lionel
-    email: lionel@rstudio.com
+    email: lionel@posit.co
   - family-names: Wickham
     given-names: Hadley
-    email: hadley@rstudio.com
+    email: hadley@posit.co
     orcid: https://orcid.org/0000-0003-4757-117X
-  year: '2023'
-  version: '>= 1.0.3'
+  year: '2024'
+  doi: 10.32614/CRAN.package.lifecycle
+  version: '>= 1.0.4'
 - type: software
   title: lubridate
   abstract: 'lubridate: Make Dealing with Dates a Little Easier'
@@ -140,8 +133,20 @@ references:
     given-names: Garrett
   - family-names: Wickham
     given-names: Hadley
-  year: '2023'
-  version: '>= 1.9.2'
+  year: '2024'
+  doi: 10.32614/CRAN.package.lubridate
+  version: '>= 1.9.3'
+- type: software
+  title: prettycheck
+  abstract: 'prettycheck: Pretty assertive programming'
+  notes: Imports
+  url: https://github.com/danielvartan/prettycheck/
+  authors:
+  - family-names: Vartanian
+    given-names: Daniel
+    email: danvartan@gmail.com
+    orcid: https://orcid.org/0000-0001-7782-759X
+  year: '2024'
 - type: software
   title: rutils
   abstract: 'rutils: Utility Functions for R'
@@ -152,7 +157,23 @@ references:
     given-names: Daniel
     email: danvartan@gmail.com
     orcid: https://orcid.org/0000-0001-7782-759X
-  year: '2023'
+  year: '2024'
+- type: software
+  title: stringdist
+  abstract: 'stringdist: Approximate String Matching, Fuzzy Text Search, and String
+    Distance Functions'
+  notes: Imports
+  url: https://github.com/markvanderloo/stringdist
+  repository: https://CRAN.R-project.org/package=stringdist
+  authors:
+  - family-names: Loo
+    given-names: Mark
+    name-particle: van der
+    email: mark.vanderloo@gmail.com
+    orcid: https://orcid.org/0000-0002-9807-4686
+  year: '2024'
+  doi: 10.32614/CRAN.package.stringdist
+  version: '>= 0.9.12'
 - type: software
   title: covr
   abstract: 'covr: Test Coverage for Packages'
@@ -163,8 +184,9 @@ references:
   - family-names: Hester
     given-names: Jim
     email: james.f.hester@gmail.com
-  year: '2023'
-  version: '>= 3.6.1'
+  year: '2024'
+  doi: 10.32614/CRAN.package.covr
+  version: '>= 3.6.4'
 - type: software
   title: knitr
   abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
@@ -176,8 +198,9 @@ references:
     given-names: Yihui
     email: xie@yihui.name
     orcid: https://orcid.org/0000-0003-0645-5666
-  year: '2023'
-  version: '>= 1.42'
+  year: '2024'
+  doi: 10.32614/CRAN.package.knitr
+  version: '>= 1.48'
 - type: software
   title: mockr
   abstract: 'mockr: Mocking in R'
@@ -188,7 +211,8 @@ references:
   - family-names: Müller
     given-names: Kirill
     email: kirill@cynkra.com
-  year: '2023'
+  year: '2024'
+  doi: 10.32614/CRAN.package.mockr
   version: '>= 0.2.1'
 - type: software
   title: rlang
@@ -203,8 +227,9 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2023'
-  version: '>= 1.0.6'
+  year: '2024'
+  doi: 10.32614/CRAN.package.rlang
+  version: '>= 1.1.4'
 - type: software
   title: rmarkdown
   abstract: 'rmarkdown: Dynamic Documents for R'
@@ -247,36 +272,37 @@ references:
     given-names: Richard
     email: rich@posit.co
     orcid: https://orcid.org/0000-0003-3925-190X
-  year: '2023'
-  version: '>= 2.20'
+  year: '2024'
+  doi: 10.32614/CRAN.package.rmarkdown
+  version: '>= 2.28'
 - type: software
   title: spelling
   abstract: 'spelling: Tools for Spell Checking in R'
   notes: Suggests
-  url: https://docs.ropensci.org/spelling/
+  url: https://ropensci.r-universe.dev/spelling
   repository: https://CRAN.R-project.org/package=spelling
   authors:
   - family-names: Ooms
     given-names: Jeroen
-    email: jeroen@berkeley.edu
+    email: jeroenooms@gmail.com
     orcid: https://orcid.org/0000-0002-4035-0289
   - family-names: Hester
     given-names: Jim
     email: james.hester@rstudio.com
-  year: '2023'
-  version: '>= 2.2'
+  year: '2024'
+  doi: 10.32614/CRAN.package.spelling
+  version: '>= 2.3.1'
 - type: software
   title: stats
   abstract: 'R: A Language and Environment for Statistical Computing'
   notes: Suggests
   authors:
   - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2023'
   institution:
     name: R Foundation for Statistical Computing
-  version: '>= 4.2.0'
+    address: Vienna, Austria
+  year: '2024'
+  version: '>= 4.3'
 - type: software
   title: testthat
   abstract: 'testthat: Unit Testing for R'
@@ -287,8 +313,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2023'
-  version: '>= 3.1.6'
-identifiers:
-- type: url
-  value: https://github.com/giperbio/lubritime/
+  year: '2024'
+  doi: 10.32614/CRAN.package.testthat
+  version: '>= 3.2.1.1'
+

@@ -70,7 +70,7 @@ change_date <- function(x, date) {
   lubridate::`date<-`(x, date)
 }
 
-#' @rdname change_day
+#' @rdname change_date
 #' @export
 change_day <- function(x, day) {
   prettycheck:::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
@@ -104,7 +104,7 @@ change_day <- function(x, day) {
   lubridate::`day<-`(x, day)
 }
 
-#' @rdname change_day
+#' @rdname change_date
 #' @export
 change_month <- function(x, month) {
   prettycheck:::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
@@ -116,7 +116,7 @@ change_month <- function(x, month) {
   lubridate::`month<-`(x, month)
 }
 
-#' @rdname change_day
+#' @rdname change_date
 #' @export
 change_year <- function(x, year) {
   prettycheck:::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))

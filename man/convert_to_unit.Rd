@@ -9,7 +9,7 @@ convert_to_unit(x, from = "seconds", to = "hours")
 \arguments{
 \item{x}{A \code{\link[base:numeric]{numeric}} object.}
 
-\item{from}{A string indicationg the unit of \code{x} (see
+\item{from}{A string indicating the unit of \code{x} (see
 the \emph{Units} section to learn more) (default: \code{"seconds"}).}
 
 \item{to}{(optional) a string indicating the desire output unit
@@ -65,5 +65,9 @@ convert_to_unit(7, "days", "weeks")
 
 convert_to_unit(1, "week", "days")
 #> [1] 7
+}
+\seealso{
+Other parsing/conversion functions: 
+\code{\link{change_date}()}
 }
 \concept{parsing/conversion functions}

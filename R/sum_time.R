@@ -288,8 +288,9 @@ sum_time_build <- function(..., vectorize = FALSE, cycle = NULL,
 
   lapply(out, prettycheck:::assert_multi_class, classes)
   prettycheck:::assert_flag(vectorize)
-  prettycheck:::assert_multi_class(cycle, c("numeric", "Duration"),
-                                null.ok = TRUE)
+  prettycheck:::assert_multi_class(
+    cycle, c("numeric", "Duration"), null.ok = TRUE
+  )
   prettycheck:::assert_number(cycle, lower = 0, null.ok = TRUE)
   prettycheck:::assert_flag(reverse)
   prettycheck:::assert_flag(na_rm)

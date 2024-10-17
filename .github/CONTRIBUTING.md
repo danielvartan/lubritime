@@ -6,13 +6,13 @@ First of all, thanks for considering contributing to `lubritime`! 👍 It's peop
 
 `lubritime` is an open source project, maintained by people who care. We are not directly funded to do so.
 
-[repo]: https://github.com/giperbio/lubritime
-[issues]: https://github.com/giperbio/lubritime/issues
-[discussions]: https://github.com/giperbio/lubritime/discussions
-[new_issue]: https://github.com/giperbio/lubritime/issues/new
-[new_discussion]: https://github.com/giperbio/lubritime/discussions/new
-[website]: https://giperbio.github.io/lubritime
-[citation]: https://giperbio.github.io/lubritime/authors.html
+[repo]: https://github.com/danielvartan/lubritime
+[issues]: https://github.com/danielvartan/lubritime/issues
+[discussions]: https://github.com/danielvartan/lubritime/discussions
+[new_issue]: https://github.com/danielvartan/lubritime/issues/new
+[new_discussion]: https://github.com/danielvartan/lubritime/discussions/new
+[website]: https://danielvartan.github.io/lubritime
+[citation]: https://danielvartan.github.io/lubritime/authors.html
 [email]: mailto:danvartan@gmail.com
 
 ## Code of conduct
