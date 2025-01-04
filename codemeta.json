@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.1 (2024-06-14 ucrt)",
+  "runtimePlatform": "R version 4.4.2 (2024-10-31)",
   "author": [
     {
       "@type": "Person",
@@ -60,7 +60,7 @@
       "@type": "SoftwareApplication",
       "identifier": "knitr",
       "name": "knitr",
-      "version": ">= 1.48",
+      "version": ">= 1.49",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -99,7 +99,7 @@
       "@type": "SoftwareApplication",
       "identifier": "rmarkdown",
       "name": "rmarkdown",
-      "version": ">= 2.28",
+      "version": ">= 2.29",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -131,7 +131,7 @@
       "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
-      "version": ">= 3.2.1.1",
+      "version": ">= 3.2.2",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -204,7 +204,7 @@
       "@type": "SoftwareApplication",
       "identifier": "lubridate",
       "name": "lubridate",
-      "version": ">= 1.9.3",
+      "version": ">= 1.9.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -229,7 +229,7 @@
       "@type": "SoftwareApplication",
       "identifier": "stringdist",
       "name": "stringdist",
-      "version": ">= 0.9.12",
+      "version": ">= 0.9.14",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -240,11 +240,11 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "147.564KB",
+  "fileSize": "157.834KB",
   "citation": [
     {
       "@type": "CreativeWork",
-      "datePublished": "2024",
+      "datePublished": "2025",
       "author": [
         {
           "@type": "Person",

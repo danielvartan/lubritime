@@ -114,6 +114,7 @@ assign_date(start, end, ambiguity = 24)
 \seealso{
 Other circular time functions: 
 \code{\link{cycle_time}()},
+\code{\link{link_to_timeline}()},
 \code{\link{shorter_int}()}
 }
 \concept{circular time functions}

@@ -34,12 +34,6 @@ You can install `lubritime` using the
 remotes::install_github("danielvartan/lubritime")
 ```
 
-## Contributing
-
-We welcome contributions, including bug reports. Take a moment to review
-our [Guidelines for
-Contributing](https://danielvartan.github.io/lubritime/CONTRIBUTING.html).
-
 ## License
 
 [![License:
@@ -47,6 +41,12 @@ MIT](https://img.shields.io/badge/license-MIT-green.png)](https://opensource.org
 
 `lubritime` code is released under the [MIT
 license](https://opensource.org/license/mit/).
+
+## Contributing
+
+We welcome contributions, including bug reports. Take a moment to review
+our [Guidelines for
+Contributing](https://danielvartan.github.io/lubritime/CONTRIBUTING.html).
 
 <br>
 

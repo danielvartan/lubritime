@@ -170,6 +170,7 @@ longer_duration(x, y)
 \seealso{
 Other circular time functions: 
 \code{\link{assign_date}()},
-\code{\link{cycle_time}()}
+\code{\link{cycle_time}()},
+\code{\link{link_to_timeline}()}
 }
 \concept{circular time functions}

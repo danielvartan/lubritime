@@ -106,5 +106,8 @@ Wickham, H., & Grolemund, G. (n.d.). \emph{R for data science}. (n.p.).
 Other date-time rounding functions:
 \code{\link[hms:round_hms]{round_hms()}} \code{\link[hms:round_hms]{trunc_hms()}}
 \code{\link[lubridate:round_date]{round_date()}}.
+
+Other utility functions: 
+\code{\link{get_last_week}()}
 }
 \concept{utility functions}
