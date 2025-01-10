@@ -70,7 +70,7 @@
 #'   origin                           origin
 #' ```
 #'
-#' Note that now the origin is not fix, but cyclical.
+#' Note that now the origin is not fixed, but cyclical.
 #'
 #' `cycle_time()` operates by converting linear time objects using a circular
 #' approach relative to the cycle length (e.g, `cycle = 86400` (1 day)).
