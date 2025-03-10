@@ -1,5 +1,5 @@
 Package: lubritime
-Title: An Extension for the Lubridate Package
+Title: An Extension for lubridate
 Version: 0.0.0.9000
 Authors@R: c(
         person(
@@ -10,15 +10,16 @@ Authors@R: c(
             comment = c(ORCID = "0000-0001-7782-759X")
             )
     )
-Description: An extension for the 'lubridate' package from tidyverse, adding new 
-     features to deal with temporal objects.
+Description: An extension for the 'lubridate' package from tidyverse, adding
+    new features to deal with temporal objects.
 License: MIT + file LICENSE
-URL: https://danielvartan.github.io/lubritime/, 
+URL: https://danielvartan.github.io/lubritime/,
     https://github.com/danielvartan/lubritime/
 BugReports: https://github.com/danielvartan/lubritime/issues/
 Depends:
     R (>= 4.3)
-Imports: 
+Imports:
+    checkmate (>= 2.3.2),
     cli (>= 3.6.3),
     dplyr (>= 1.1.4),
     hms (>= 1.1.3),
@@ -26,8 +27,8 @@ Imports:
     lubridate (>= 1.9.4),
     prettycheck,
     rutils,
-    stringdist (>= 0.9.14),
-Suggests: 
+    stringdist (>= 0.9.15),
+Suggests:
     covr (>= 3.6.4),
     knitr (>= 1.49),
     mockr (>= 0.2.1),
@@ -36,7 +37,7 @@ Suggests:
     spelling (>= 2.3.1),
     stats (>= 4.3),
     testthat (>= 3.2.2)
-Remotes: 
+Remotes:
     github::danielvartan/prettycheck,
     github::danielvartan/rutils
 Config/testthat/edition: 3

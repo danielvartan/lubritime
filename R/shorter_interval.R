@@ -98,29 +98,29 @@
 #'   object.
 #'
 #' @return
-#'
-#' * For `shorter_int()` or `longer_int()`, an
-#' [`Interval`][lubridate::interval()] object with the shorter or longer
+#' - For `shorter_int()` or `longer_int()`, an
+#' [`Interval`][lubridate::interval()] vector with the shorter or longer
 #' interval between `x` and `y`.
-#' * For `shorter_duration()` or `longer_duration()`, a
-#' [`Duration`][lubridate::duration()] object with the shorter or longer
+#' - For `shorter_duration()` or `longer_duration()`, a
+#' [`Duration`][lubridate::duration()] vector with the shorter or longer
 #' duration between `x` and `y`.
 #'
 #' @family circular time functions
 #' @export
 #'
 #' @examples
-#' ## Scalar example
-#'
 #' x <- hms::parse_hm("23:00")
 #' y <- hms::parse_hm("01:00")
 #'
 #' shorter_int(x, y)
 #' #> [1] 1970-01-01 23:00:00 UTC--1970-01-02 01:00:00 UTC # Expected
+#'
 #' shorter_duration(x, y)
 #' #> [1] "7200s (~2 hours)" # Expected
+#'
 #' longer_int(x, y)
 #' #> [1] 1970-01-01 01:00:00 UTC--1970-01-01 23:00:00 UTC # Expected
+#'
 #' longer_duration(x, y)
 #' #> [1] "79200s (~22 hours)" # Expected
 #'
@@ -129,14 +129,15 @@
 #'
 #' shorter_int(x, y)
 #' #> [1] 1970-01-01 12:00:00 UTC--1970-01-01 12:00:00 UTC # Expected
+#'
 #' shorter_duration(x, y)
 #' #> [1] "0s" # Expected
+#'
 #' longer_int(x, y)
 #' #> [1] 1970-01-01 12:00:00 UTC--1970-01-02 12:00:00 UTC # Expected
+#'
 #' longer_duration(x, y)
 #' #> [1] "86400s (~1 days)" # Expected
-#'
-#' ## Vector example
 #'
 #' x <- c(hms::parse_hm("15:30"), hms::parse_hm("21:30"))
 #' y <- c(hms::parse_hm("19:30"), hms::parse_hm("04:00"))
@@ -144,11 +145,14 @@
 #' shorter_int(x, y)
 #' #> [1] 1970-01-01 15:30:00 UTC--1970-01-01 19:30:00 UTC # Expected
 #' #> [2] 1970-01-01 21:30:00 UTC--1970-01-02 04:00:00 UTC # Expected
+#'
 #' shorter_duration(x, y)
 #' #> [1] [1] "14400s (~4 hours)"   "23400s (~6.5 hours)" # Expected
+#'
 #' longer_int(x, y)
 #' #> [1] 1970-01-01 19:30:00 UTC--1970-01-02 15:30:00 UTC # Expected
 #' #> [2] 1970-01-01 04:00:00 UTC--1970-01-01 21:30:00 UTC # Expected
+#'
 #' longer_duration(x, y)
 #' #> [1] "72000s (~20 hours)"   "63000s (~17.5 hours)" # Expected
 shorter_int <- function(x, y) {
@@ -176,26 +180,34 @@ longer_duration <- function(x, y) {
 int_build <- function(x, y, method = "shorter") {
   method_choices <- c("shorter", "longer")
 
-  prettycheck:::assert_multi_class(x, c("hms", "POSIXt"))
-  prettycheck:::assert_numeric(as.numeric(hms::as_hms(x)), lower = 0,
-                            upper = 86400)
-  prettycheck:::assert_multi_class(y, c("hms", "POSIXt"))
-  prettycheck:::assert_numeric(as.numeric(hms::as_hms(y)), lower = 0,
-                            upper = 86400)
-  prettycheck:::assert_identical(x, y, type = "length")
-  prettycheck:::assert_choice(method, method_choices)
+  checkmate::assert_multi_class(x, c("hms", "POSIXt"))
+  prettycheck::assert_numeric(
+    as.numeric(hms::as_hms(x)),
+    lower = 0,
+    upper = 86400
+  )
+  checkmate::assert_multi_class(y, c("hms", "POSIXt"))
+  prettycheck::assert_numeric(
+    as.numeric(hms::as_hms(y)),
+    lower = 0,
+    upper = 86400
+  )
+  prettycheck::assert_identical(x, y, type = "length")
+  checkmate::assert_choice(method, method_choices)
 
-  x <- x |>
+  x <-
+    x |>
     hms::as_hms() |>
     as.POSIXct() |>
-    flat_posixt()
+    flat_posixt_date()
 
-  y <- y |>
+  y <-
+    y |>
     hms::as_hms() |>
     as.POSIXct() |>
-    flat_posixt()
+    flat_posixt_date()
 
-  list2env(rutils:::swap(x, y, x > y), envir = environment())
+  list2env(rutils::swap_if(x, y, x > y), envir = environment())
 
   x1_y1_interval <- lubridate::interval(x, y)
   y1_x2_interval <- lubridate::interval(y, x + lubridate::days())

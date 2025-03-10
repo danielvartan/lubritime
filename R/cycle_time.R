@@ -218,12 +218,14 @@ cycle_time.difftime <- function(time, cycle, reverse = TRUE) {
   out <- time
   units(out) <- "secs"
 
-  out <- out |>
+  out <-
+    out |>
     cycle_time_build(cycle, reverse) |>
     lubridate::seconds() |>
     lubridate::as.difftime(units = "secs")
 
   units(out) <- units(time)
+
   out
 }
 
@@ -236,9 +238,9 @@ cycle_time.hms <- function(time, cycle, reverse = TRUE) {
 }
 
 cycle_time_build <- function(time, cycle, reverse) {
-  prettycheck:::assert_multi_class(cycle, c("numeric", "Duration"))
-  prettycheck:::assert_number(as.numeric(cycle), lower = 0, null.ok = FALSE)
-  prettycheck:::assert_flag(reverse)
+  checkmate::assert_multi_class(cycle, c("numeric", "Duration"))
+  checkmate::assert_number(as.numeric(cycle), lower = 0, null.ok = FALSE)
+  checkmate::assert_flag(reverse)
 
   cycle <- cycle |> as.numeric()
 

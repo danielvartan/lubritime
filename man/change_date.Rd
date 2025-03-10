@@ -36,7 +36,7 @@ A \code{\link[base:Dates]{Date}}, \code{\link[base:DateTimeClasses]{POSIXct}}, o
 or date.
 }
 \description{
-\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#maturing}{\figure{lifecycle-maturing.svg}{options: alt='[Maturing]'}}}{\strong{[Maturing]}}
 
 \verb{change_*()} allows you to change the day, month, year, or date of a
 \code{\link[base:Dates]{Date}}, \code{\link[base:DateTimeClasses]{POSIXct}}, or
@@ -79,7 +79,10 @@ change_date(x, as.Date("2000-01-01"))
 #> [1] "2000-01-01 12:00:00 UTC" "2000-01-01 12:00:00 UTC" # Expected
 }
 \seealso{
-Other parsing/conversion functions: 
-\code{\link{convert_to_unit}()}
+Other utility functions: 
+\code{\link{fix_hms}()},
+\code{\link{flat_posixt_date}()},
+\code{\link{get_last_week}()},
+\code{\link{round_time}()}
 }
-\concept{parsing/conversion functions}
+\concept{utility functions}

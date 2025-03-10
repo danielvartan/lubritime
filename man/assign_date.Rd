@@ -8,21 +8,24 @@ assign_date(start, end, ambiguity = 0)
 }
 \arguments{
 \item{start, end}{An \code{\link[hms:hms]{hms}} or \code{\link[base:as.POSIXlt]{POSIXt}}
-object indicating the start or end hour.}
+vector indicating the start or end hour.}
 
-\item{ambiguity}{(optional) a \code{\link[=numeric]{numeric}} or \code{NA} value to
+\item{ambiguity}{(Optional) a \code{\link[=numeric]{numeric}} or \code{NA} value to
 instruct \code{assign_date()} on how to deal with ambiguities. See the Details
 section to learn more (default: \code{0}).}
 }
 \value{
-A \code{start}--\code{end} \code{\link[lubridate:interval]{Interval}} object.
+An \code{\link[lubridate:interval]{Interval}} object.
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#maturing}{\figure{lifecycle-maturing.svg}{options: alt='[Maturing]'}}}{\strong{[Maturing]}}
 
-\code{assign_date()} assign dates to two sequential hours. It can facilitate
-time arithmetic by locating time values without a date reference on a
-timeline.
+\code{assign_date()} assigns dates to two sequential hours, assuming that the
+interval between the \code{start} and \code{end} hour is less than or equal to 24
+hours.
+
+This function facilitates time arithmetic by placing time values
+without a date reference onto a timeline.
 }
 \details{
 \subsection{\code{ambiguity} argument}{

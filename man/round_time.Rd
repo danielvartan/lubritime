@@ -108,6 +108,9 @@ Other date-time rounding functions:
 \code{\link[lubridate:round_date]{round_date()}}.
 
 Other utility functions: 
+\code{\link{change_date}()},
+\code{\link{fix_hms}()},
+\code{\link{flat_posixt_date}()},
 \code{\link{get_last_week}()}
 }
 \concept{utility functions}

@@ -66,8 +66,4 @@ convert_to_unit(7, "days", "weeks")
 convert_to_unit(1, "week", "days")
 #> [1] 7
 }
-\seealso{
-Other parsing/conversion functions: 
-\code{\link{change_date}()}
-}
 \concept{parsing/conversion functions}

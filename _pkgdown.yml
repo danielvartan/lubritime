@@ -1,15 +1,13 @@
-# See <https://pkgdown.r-lib.org/> to learn more.
+# (2025-03-02) You may have to install the development version of `bslib` to
+# use `_brands.yml` (`remotes::install_github("rstudio/bslib", force = TRUE)`).
 
 url: https://danielvartan.github.io/lubritime/
 
 template:
-  bootstrap: 5
+  bslib:
+    version: 5
   math-rendering: mathjax
   light-switch: true
-  bslib:
-    base_font: {google: "DM Sans"}
-    heading_font: {google: "Poppins"}
-    code_font: {google: "DM Mono"}
   params:
     noindex: false
 
@@ -43,18 +41,18 @@ reference:
   - link_to_timeline
   - shorter_int
 
-- title: Dates
-  contents:
-  - change_date
-
 - title: Intervals
   contents:
   - int_duration
+  - int_mean
 
 - title: Utilities
   contents:
+  - change_date
   - convert_to_unit
   - get_last_week
+  - fix_hms
+  - flat_posixt_date
   - round_time
 
 authors:

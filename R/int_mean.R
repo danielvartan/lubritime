@@ -1,16 +1,47 @@
-int_mean <- function(start, end, ambiguity = 24) {
-  classes <- c("Duration", "difftime", "hms", "POSIXct", "POSIXlt")
+#' Compute the mean of an `Interval` object
+#'
+#' @description
+#'
+#' `r lifecycle::badge("maturing")`
+#'
+#' `int_mean()` computes the mean of an [`Interval`][lubridate::interval]
+#' object.
+#'
+#' @param int An [`Interval`][lubridate::interval()] vector.
+#'
+#' @return  An [`Interval`][lubridate::interval()] vector.
+#'
+#' @family Interval functions
+#' @export
+#'
+#' @examples
+#' lubridate::interval(
+#'   lubridate::ymd_hms("2023-01-01 22:00:01", tz = "UTC"),
+#'   lubridate::ymd_hms("2023-01-02 02:00:01", tz = "UTC"),
+#'   tzone = "UTC"
+#' ) |>
+#'   int_mean()
+#' #> [1] "2023-01-02 00:00:01 UTC" # Expected
+#'
+#' c(
+#'   lubridate::interval(
+#'     lubridate::ymd_hms("2023-01-01 22:00:01", tz = "UTC"),
+#'     lubridate::ymd_hms("2023-01-02 02:00:01", tz = "UTC"),
+#'     tzone = "UTC"
+#'   ),
+#'   lubridate::interval(
+#'     lubridate::ymd_hms("1990-01-01 06:00:00", tz = "UTC"),
+#'     lubridate::ymd_hms("1990-01-01 12:00:00", tz = "UTC"),
+#'     tzone = "UTC"
+#'   )
+#' ) |>
+#'   int_mean()
+#' #> [1] "2023-01-02 00:00:01 UTC" "1990-01-01 09:00:00 UTC" # Expected
+int_mean <- function(int) {
+  prettycheck::assert_interval(int)
 
-  prettycheck:::assert_multi_class(start, classes)
-  prettycheck:::assert_multi_class(end, classes)
-  prettycheck:::assert_choice(ambiguity, c(0, 24, NA))
+  start <- lubridate::int_start(int)
+  mean_duration <- (as.numeric(int) / 2) |> lubridate::seconds()
 
-  start <- cycle_time(hms::hms(extract_seconds(start)),
-                      cycle = lubridate::ddays())
-  end <- cycle_time(hms::hms(extract_seconds(end)),
-                    cycle = lubridate::ddays())
-  interval <- assign_date(start, end, ambiguity = ambiguity) |> rutils::shush()
-  mean <- as.numeric(start) + (as.numeric(interval) / 2)
-
-  hms::hms(mean)
+  start + mean_duration
 }

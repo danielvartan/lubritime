@@ -57,7 +57,7 @@
 #' convert_to_unit(1, "week", "days")
 #' #> [1] 7
 convert_to_unit <- function(x, from = "seconds", to = "hours") {
-  prettycheck:::assert_numeric(x)
+  prettycheck::assert_numeric(x)
 
   from <- normalize_unit(from)
   to <- normalize_unit(to)
@@ -84,7 +84,7 @@ convert_to_unit <- function(x, from = "seconds", to = "hours") {
 }
 
 convert_to_seconds <- function(x, unit) {
-  prettycheck:::assert_numeric(x)
+  prettycheck::assert_numeric(x)
 
   unit <- normalize_unit(unit)
 
@@ -107,13 +107,13 @@ convert_to_seconds <- function(x, unit) {
   )
 }
 
-convert_temporal_obj_to_seconds <- function(x,ignore_date = TRUE) {
-  prettycheck:::assert_temporal(x)
+convert_temporal_obj_to_seconds <- function(x,ignore_date = TRUE) { #nolint
+  prettycheck::assert_temporal(x)
 
   if (lubridate::is.duration(x) ||
-      lubridate::is.period(x) ||
-      hms::is_hms(x) ||
-      lubridate::is.interval(x)) {
+        lubridate::is.period(x) ||
+        hms::is_hms(x) ||
+        lubridate::is.interval(x)) {
     as.numeric(x)
   } else if (class(x)[1] == "difftime") {
     as.numeric(hms::as_hms(x))
@@ -183,8 +183,8 @@ normalize_unit <- function(unit) {
         unit,
         temporal_units,
         maxDist = 1
-        )
-      ]
+      )
+    ]
 
     if (length(out) == 0 || unit == "") {
       if (unit == "") unit <- '""'
@@ -199,7 +199,7 @@ normalize_unit <- function(unit) {
 }
 
 year_week_warning <- function(unit) {
-  prettycheck:::assert_string(unit)
+  checkmate::assert_string(unit)
 
   if (unit == "years" || unit == "months") {
     cli::cli_alert_warning(

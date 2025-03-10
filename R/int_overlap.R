@@ -11,10 +11,10 @@
 # int_overlap(int_1, int_2)
 
 int_overlap <- function(int_1, int_2) {
-  prettycheck:::assert_class(int_1, "Interval")
-  prettycheck:::assert_numeric(as.numeric(int_1), len = 1)
-  prettycheck:::assert_class(int_2, "Interval")
-  prettycheck:::assert_numeric(as.numeric(int_2), min_len = 1)
+  checkmate::assert_class(int_1, "Interval")
+  prettycheck::assert_numeric(as.numeric(int_1), len = 1)
+  checkmate::assert_class(int_2, "Interval")
+  prettycheck::assert_numeric(as.numeric(int_2), min_len = 1)
 
   ## Similar to watching a planet travelling in front of its star
 
@@ -42,9 +42,7 @@ int_overlap <- function(int_1, int_2) {
 }
 
 get_int_overlap <- function(int_1, int_2) {
-  if (isFALSE(lubridate::int_overlaps(int_1, int_2))) {
-    return(rutils::na_as(int_1))
-  } else {
+  if (isTRUE(lubridate::int_overlaps(int_1, int_2))) {
     int_start <- dplyr::if_else(
       lubridate::int_start(int_1) >= lubridate::int_start(int_2),
       lubridate::int_start(int_1), lubridate::int_start(int_2)
@@ -56,5 +54,7 @@ get_int_overlap <- function(int_1, int_2) {
     )
 
     lubridate::interval(int_start, int_end)
+  } else {
+    rutils::na_as(int_1)
   }
 }

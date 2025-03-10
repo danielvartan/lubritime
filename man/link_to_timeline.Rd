@@ -7,33 +7,33 @@
 link_to_timeline(x, threshold = hms::parse_hms("12:00:00"))
 }
 \arguments{
-\item{x}{An \code{\link[hms:hms]{hms}} or \code{\link[base:as.POSIXlt]{POSIXt}} object.}
+\item{x}{A \code{\link[hms:hms]{hms}} or \code{\link[base:as.POSIXlt]{POSIXt}} object.
+If \code{x} is a \code{POSIXt} object, only the time part will be used.}
 
-\item{threshold}{An \code{\link[hms:hms]{hms}} object representing the threshold
-time (default: \code{hms::parse_hms("12:00:00")}).}
+\item{threshold}{(Optional) A \code{\link[hms:hms]{hms}} object representing the
+threshold time (Default: \code{hms::parse_hms("12:00:00")}).}
 }
 \value{
-An \code{\link[base:as.POSIXlt]{POSIXt}} object with the same time as \code{x},
-but linked to a timeline based on the \code{threshold} time and the
+A \code{\link[base:as.POSIXlt]{POSIXt}} object with the same time as \code{x},
+but linked to a timeline based on \code{threshold} and the
 \href{https://en.wikipedia.org/wiki/Unix_time}{Unix epoch}. See the Details
 section for more information.
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#maturing}{\figure{lifecycle-maturing.svg}{options: alt='[Maturing]'}}}{\strong{[Maturing]}}
 
-\code{link_to_timeline()} is a function that links local times onto a two-day
-timeline based on a specified threshold time.
+\code{link_to_timeline()} links local times (e.g., 10:00, 22:00) onto a two-day
+timeline based on a specified threshold.
 
 This function is particularly useful for time arithmetic when dealing with
-circular time representations. For information about circular time
-representations, see \code{\link[=cycle_time]{cycle_time()}} Details
-section.
+circular time representations. For information about circular time,
+see \code{\link[=cycle_time]{cycle_time()}} Details section.
 }
 \details{
 \code{link_to_timeline()} will link local times onto a two-day timeline based on
 the \code{threshold} time and the
 \href{https://en.wikipedia.org/wiki/Unix_time}{Unix epoch} (\code{1970-01-01}).
-If the threshold time is \code{12:00:00}, for example, all times \strong{before} this
+For example, if the threshold time is \code{12:00:00}, all times \strong{before} this
 threshold will be linked \emph{on the day after the Unix epoch} (\code{1970-01-02}) and
 all times \strong{after} this threshold will be linked \emph{to the Unix epoch}
 (\code{1970-01-01}).
@@ -41,15 +41,12 @@ all times \strong{after} this threshold will be linked \emph{to the Unix epoch}
 The exception is when all times are before the threshold. In this case, the
 function will just return all times linked to the Unix epoch (\code{1970-01-01}).
 
-Please note that the Unix Epoch is the origin of time for the \code{POSIXct}
-class. This means that
+Please note that the Unix Epoch is the origin of time for the
+\code{\link[base:DateTimeClasses]{POSIXct}} class. This means that
 \code{as.POSIXct("1970-01-01 00:00:00", tz = "UTC") |> as.numeric()}
-is equal to \code{0}. Learn more about the \code{POSIXct} class in
-\link[base:as.POSIXlt]{as.POSIXct()}.
+is equal to \code{0}.
 }
 \examples{
-## Scalar Example (Always on `1970-01-01`)
-
 hms::parse_hm("18:00") |>
   link_to_timeline(threshold = hms::parse_hms("12:00:00"))
 #> [1] "1970-01-01 18:00:00 UTC" # Expected
@@ -57,8 +54,6 @@ hms::parse_hm("18:00") |>
 as.POSIXct("2020-01-01 05:00:00", tz = "UTC") |>
   link_to_timeline(threshold = hms::parse_hms("12:00:00"))
 #> [1] "1970-01-01 05:00:00 UTC" # Expected
-
-## Vector Example
 
 c(hms::parse_hm("18:00"), hms::parse_hm("06:00")) |>
   link_to_timeline(threshold = hms::parse_hms("12:00:00"))

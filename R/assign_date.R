@@ -4,9 +4,12 @@
 #'
 #' `r lifecycle::badge("maturing")`
 #'
-#' `assign_date()` assign dates to two sequential hours. It can facilitate
-#' time arithmetic by locating time values without a date reference on a
-#' timeline.
+#' `assign_date()` assigns dates to two sequential hours, assuming that the
+#' interval between the `start` and `end` hour is less than or equal to 24
+#' hours.
+#'
+#' This function facilitates time arithmetic by placing time values
+#' without a date reference onto a timeline.
 #'
 #' @details
 #'
@@ -60,12 +63,12 @@
 #' if `start` or `end` are `NA`.
 #'
 #' @param start,end An [`hms`][hms::hms()] or [`POSIXt`][base::as.POSIXct()]
-#'   object indicating the start or end hour.
-#' @param ambiguity (optional) a [`numeric`][numeric()] or `NA` value to
+#'   vector indicating the start or end hour.
+#' @param ambiguity (Optional) a [`numeric`][numeric()] or `NA` value to
 #'   instruct `assign_date()` on how to deal with ambiguities. See the Details
 #'   section to learn more (default: `0`).
 #'
-#' @return A `start`--`end` [`Interval`][lubridate::interval()] object.
+#' @return An [`Interval`][lubridate::interval] object.
 #'
 #' @family circular time functions
 #' @export
@@ -103,34 +106,30 @@
 #' assign_date(start, end, ambiguity = 24)
 #' #> [1] 1970-01-01 12:00:00 UTC--1970-01-02 12:00:00 UTC # Expected
 assign_date <- function(start, end, ambiguity = 0) {
-  prettycheck:::assert_multi_class(start, c("hms", "POSIXt"))
-
-  prettycheck:::assert_numeric(
+  checkmate::assert_multi_class(start, c("hms", "POSIXt"))
+  prettycheck::assert_numeric(
     as.numeric(hms::as_hms(start)),
     lower = 0,
     upper = 86400
   )
-
-  prettycheck:::assert_multi_class(end, c("hms", "POSIXt"))
-
-  prettycheck:::assert_numeric(
+  checkmate::assert_multi_class(end, c("hms", "POSIXt"))
+  prettycheck::assert_numeric(
     as.numeric(hms::as_hms(end)),
     lower = 0,
     upper = 86400
   )
-
-  prettycheck:::assert_identical(start, end, type = "length")
-  prettycheck:::assert_choice(ambiguity, c(0, 24, NA))
+  prettycheck::assert_identical(start, end, type = "length")
+  checkmate::assert_choice(ambiguity, c(0, 24, NA))
 
   start <- start |>
     hms::as_hms() |>
     as.POSIXct() |>
-    flat_posixt()
+    flat_posixt_date()
 
   end <- end |>
     hms::as_hms() |>
     as.POSIXct() |>
-    flat_posixt()
+    flat_posixt_date()
 
   dplyr::case_when(
     is.na(start) | is.na(end) ~ lubridate::as.interval(NA),

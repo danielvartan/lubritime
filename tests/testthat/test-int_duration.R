@@ -1,11 +1,11 @@
-test_that("int_mean() | General test", {
+test_that("int_duration() | General test", {
   lubridate::interval(
     lubridate::ymd_hms("2023-01-01 22:00:00", tz = "UTC"),
     lubridate::ymd_hms("2023-01-02 02:00:00", tz = "UTC"),
     tzone = "UTC"
   ) |>
-    int_mean() |>
-    expect_equal(lubridate::ymd_hms("2023-01-02 00:00:00", tz = "UTC"))
+    int_duration() |>
+    expect_equal(lubridate::dhours(4))
 
   c(
     lubridate::interval(
@@ -19,16 +19,11 @@ test_that("int_mean() | General test", {
       tzone = "UTC"
     )
   ) |>
-    int_mean() |>
-    expect_equal(
-      c(
-        lubridate::ymd_hms("2023-01-02 00:00:00", tz = "UTC"),
-        lubridate::ymd_hms("1990-01-01 09:00:00", tz = "UTC")
-      )
-    )
+    int_duration() |>
+    expect_equal(c(lubridate::dhours(4), lubridate::dhours(6)))
 })
 
-test_that("int_mean() | Error test", {
+test_that("int_duration() | Error test", {
   # prettycheck::assert_interval(int)
-  int_mean(int = 1) |> expect_error()
+  int_duration(int = 1) |> expect_error()
 })

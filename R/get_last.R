@@ -35,7 +35,7 @@
 #' #> [1] 2024-11-01 UTC--2024-11-30 UTC  # Expected
 #' #> [2] 2024-10-01 UTC--2024-10-31 UTC # Expected
 get_last_week <- function(date = Sys.Date()) {
-  prettycheck:::assert_date(date)
+  checkmate::assert_date(date)
 
   lubridate::interval(
     start =
@@ -48,13 +48,14 @@ get_last_week <- function(date = Sys.Date()) {
 #' @rdname get_last_week
 #' @export
 get_last_month <- function(date = Sys.Date()) {
-  prettycheck:::assert_date(date)
+  checkmate::assert_date(date)
 
   lubridate::interval(
     start =
-      lubridate::floor_date(date, unit = "month") -
-      lubridate::period(1, "month"),
-    end = lubridate::floor_date(date, unit = "month") -
-      lubridate::period(1, "day")
+      lubridate::floor_date(date, unit = "month") %>% # Don change the pipe!
+      `-`(lubridate::period(1, "month")),
+    end =
+      lubridate::floor_date(date, unit = "month") %>% # Don change the pipe!
+      `-`(lubridate::period(1, "day"))
   )
 }

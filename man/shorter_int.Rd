@@ -22,10 +22,10 @@ object.}
 \value{
 \itemize{
 \item For \code{shorter_int()} or \code{longer_int()}, an
-\code{\link[lubridate:interval]{Interval}} object with the shorter or longer
+\code{\link[lubridate:interval]{Interval}} vector with the shorter or longer
 interval between \code{x} and \code{y}.
 \item For \code{shorter_duration()} or \code{longer_duration()}, a
-\code{\link[lubridate:duration]{Duration}} object with the shorter or longer
+\code{\link[lubridate:duration]{Duration}} vector with the shorter or longer
 duration between \code{x} and \code{y}.
 }
 }
@@ -125,17 +125,18 @@ about it in \code{\link[base:DateTimeClasses]{?DateTimeClasses}}.
 }
 }
 \examples{
-## Scalar example
-
 x <- hms::parse_hm("23:00")
 y <- hms::parse_hm("01:00")
 
 shorter_int(x, y)
 #> [1] 1970-01-01 23:00:00 UTC--1970-01-02 01:00:00 UTC # Expected
+
 shorter_duration(x, y)
 #> [1] "7200s (~2 hours)" # Expected
+
 longer_int(x, y)
 #> [1] 1970-01-01 01:00:00 UTC--1970-01-01 23:00:00 UTC # Expected
+
 longer_duration(x, y)
 #> [1] "79200s (~22 hours)" # Expected
 
@@ -144,14 +145,15 @@ y <- lubridate::as_datetime("2020-09-10 12:00:00")
 
 shorter_int(x, y)
 #> [1] 1970-01-01 12:00:00 UTC--1970-01-01 12:00:00 UTC # Expected
+
 shorter_duration(x, y)
 #> [1] "0s" # Expected
+
 longer_int(x, y)
 #> [1] 1970-01-01 12:00:00 UTC--1970-01-02 12:00:00 UTC # Expected
+
 longer_duration(x, y)
 #> [1] "86400s (~1 days)" # Expected
-
-## Vector example
 
 x <- c(hms::parse_hm("15:30"), hms::parse_hm("21:30"))
 y <- c(hms::parse_hm("19:30"), hms::parse_hm("04:00"))
@@ -159,11 +161,14 @@ y <- c(hms::parse_hm("19:30"), hms::parse_hm("04:00"))
 shorter_int(x, y)
 #> [1] 1970-01-01 15:30:00 UTC--1970-01-01 19:30:00 UTC # Expected
 #> [2] 1970-01-01 21:30:00 UTC--1970-01-02 04:00:00 UTC # Expected
+
 shorter_duration(x, y)
 #> [1] [1] "14400s (~4 hours)"   "23400s (~6.5 hours)" # Expected
+
 longer_int(x, y)
 #> [1] 1970-01-01 19:30:00 UTC--1970-01-02 15:30:00 UTC # Expected
 #> [2] 1970-01-01 04:00:00 UTC--1970-01-01 21:30:00 UTC # Expected
+
 longer_duration(x, y)
 #> [1] "72000s (~20 hours)"   "63000s (~17.5 hours)" # Expected
 }

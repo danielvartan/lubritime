@@ -1,46 +1,52 @@
-#' Compute the duration of an interval
+#' Compute the duration of an `Interval` object
 #'
-#' This function computes the duration of an interval given its start and end
-#' points.
+#' @description
 #'
-#' @param start A [`POSIXct`][base::as.POSIXct()] object representing the start
-#'   of the interval.
-#' @param end A [`POSIXct`][base::as.POSIXct()] object representing the end of
-#'  the interval.
+#' `r lifecycle::badge("maturing")`
 #'
-#' @return A [`Period`][lubridate::period()] object representing the duration of
-#'  the interval.
+#' `int_duration()` computes the duration of an
+#' [`Interval`][lubridate::interval] object
 #'
+#' @return A [`Duration`][lubridate::duration()] vector.
+#'
+#' @inheritParams int_mean
 #' @family Interval functions
 #' @export
 #'
 #' @examples
-#' ## Scalar example
+#' lubridate::interval(
+#'   lubridate::ymd_hms("2023-01-01 22:00:01", tz = "UTC"),
+#'   lubridate::ymd_hms("2023-01-02 02:00:01", tz = "UTC"),
+#'   tzone = "UTC"
+#' ) |>
+#'   int_duration()
+#' #> [1] "14400s (~4 hours)" # Expected
 #'
-#' int_duration(
-#'   start = lubridate::dmy_hms("15/01/2023 09:57:35", tz = "UTC"),
-#'   end = lubridate::dmy_hms("18/01/2023 23:59:35", tz = "UTC")
-#' )
-#' #> [1] "3d 14h 2m 0s" # Expected
+#' lubridate::interval(
+#'   lubridate::ymd_hms("2023-01-01 22:00:01", tz = "UTC"),
+#'   lubridate::ymd_hms("2023-01-02 02:00:01", tz = "UTC"),
+#'   tzone = "UTC"
+#' ) |>
+#'   int_duration() |>
+#'   lubridate::as.period()
+#' #> [1] "4H 0M 0S" # Expected
 #'
-#' ## Vector example
-#'
-#' int_duration(
-#'   start = lubridate::dmy_hms(
-#'     c("15/01/2023 09:57:35", "18/01/2023 09:57:35"),
-#'     tz = "UTC"
+#' c(
+#'   lubridate::interval(
+#'     lubridate::ymd_hms("2023-01-01 22:00:01", tz = "UTC"),
+#'     lubridate::ymd_hms("2023-01-02 02:00:01", tz = "UTC"),
+#'     tzone = "UTC"
 #'   ),
-#'   end = lubridate::dmy_hms(
-#'     c("18/01/2023 23:59:35", "20/01/2023 23:59:35"),
-#'     tz = "UTC"
+#'   lubridate::interval(
+#'     lubridate::ymd_hms("1990-01-01 06:00:00", tz = "UTC"),
+#'     lubridate::ymd_hms("1990-01-01 12:00:00", tz = "UTC"),
+#'     tzone = "UTC"
 #'   )
-#' )
-#' #> [1] "3d 14h 2m 0s" "2d 14h 2m 0s" # Expected
-int_duration <- function(start, end) {
-  prettycheck:::assert_posixct(start)
-  prettycheck:::assert_posixct(end)
+#' ) |>
+#'   int_duration()
+#' #> [1] "14400s (~4 hours)" "21600s (~6 hours)" # Expected
+int_duration <- function(int = NULL) {
+  prettycheck::assert_interval(int)
 
-  start |>
-    lubridate::interval(end, tzone = lubridate::tz(start)) |>
-    lubridate::as.period()
+  int |> lubridate::as.duration()
 }

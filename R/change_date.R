@@ -2,7 +2,7 @@
 #'
 #' @description
 #'
-#' `r lifecycle::badge("experimental")`
+#' `r lifecycle::badge("maturing")`
 #'
 #' `change_*()` allows you to change the day, month, year, or date of a
 #' [`Date`][base::Date], [`POSIXct`][base::DateTimeClasses], or
@@ -22,7 +22,7 @@
 #'   [`POSIXlt`][base::DateTimeClasses] object with the new day, month, year,
 #'   or date.
 #'
-#' @family parsing/conversion functions
+#' @family utility functions
 #' @export
 #'
 #' @examples
@@ -61,11 +61,11 @@
 #' change_date(x, as.Date("2000-01-01"))
 #' #> [1] "2000-01-01 12:00:00 UTC" "2000-01-01 12:00:00 UTC" # Expected
 change_date <- function(x, date) {
-  prettycheck:::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
-  prettycheck:::assert_multi_class(date, c("character", "Date"))
+  checkmate::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
+  checkmate::assert_multi_class(date, c("character", "Date"))
 
   if (length(date) == 1) date <- rep(date, length(x))
-  prettycheck:::assert_identical(x, date, type = "length")
+  prettycheck::assert_identical(x, date, type = "length")
 
   lubridate::`date<-`(x, date)
 }
@@ -73,32 +73,48 @@ change_date <- function(x, date) {
 #' @rdname change_date
 #' @export
 change_day <- function(x, day) {
-  prettycheck:::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
-  prettycheck:::assert_numeric(day, lower = 1, upper = 31)
+  checkmate::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
+  prettycheck::assert_numeric(day, lower = 1, upper = 31)
 
   if (length(day) == 1) day <- rep(day, length(x))
-  prettycheck:::assert_identical(x, day, type = "length")
+  prettycheck::assert_identical(x, day, type = "length")
 
-  if (any(lubridate::month(x) %in% c(4, 6, 9, 11), na.rm = TRUE)
-      && day > 30) {
-    cli::cli_abort(paste0(
-      "You can't assign more than 30 days to April, June, ",
-      "September, or November."
-    ))
+  if (
+    any(lubridate::month(x) %in% c(4, 6, 9, 11), na.rm = TRUE) &&
+      day > 30
+  ) {
+    cli::cli_abort(
+      paste0(
+        "You can't assign more than 30 days to April, June, ",
+        "September, or November."
+      )
+    )
   }
 
-  if (any(lubridate::month(x) == 2 & !lubridate::leap_year(x)) && day > 28) {
-    cli::cli_abort(paste0(
-      "You can't assign more than 28 days to February in ",
-      "non-leap years."
-    ))
+  if (
+    any(lubridate::month(x) == 2 & !lubridate::leap_year(x)) &&
+      day > 28
+  ) {
+    cli::cli_abort(
+      paste0(
+        "You can't assign more than 28 days to February in ",
+        "non-leap years."
+      )
+    )
   }
 
-  if (any(lubridate::month(x) == 2 & lubridate::leap_year(x), na.rm = TRUE) &&
-      day > 29) {
-    cli::cli_abort(paste0(
-      "You can't assign more than 29 days to February in a leap year."
-    ))
+  if (
+    any(
+      lubridate::month(x) == 2 & lubridate::leap_year(x),
+      na.rm = TRUE
+    ) &&
+      day > 29
+  ) {
+    cli::cli_abort(
+      paste0(
+        "You can't assign more than 29 days to February in a leap year."
+      )
+    )
   }
 
   lubridate::`day<-`(x, day)
@@ -107,11 +123,11 @@ change_day <- function(x, day) {
 #' @rdname change_date
 #' @export
 change_month <- function(x, month) {
-  prettycheck:::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
-  prettycheck:::assert_numeric(month, lower = 1, upper = 12)
+  checkmate::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
+  prettycheck::assert_numeric(month, lower = 1, upper = 12)
 
   if (length(month) == 1) month <- rep(month, length(x))
-  prettycheck:::assert_identical(x, month, type = "length")
+  prettycheck::assert_identical(x, month, type = "length")
 
   lubridate::`month<-`(x, month)
 }
@@ -119,10 +135,10 @@ change_month <- function(x, month) {
 #' @rdname change_date
 #' @export
 change_year <- function(x, year) {
-  prettycheck:::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
+  checkmate::assert_multi_class(x, c("Date", "POSIXct", "POSIXlt"))
 
   if (length(year) == 1) year <- rep(year, length(x))
-  prettycheck:::assert_identical(x, year, type = "length")
+  prettycheck::assert_identical(x, year, type = "length")
 
   lubridate::`year<-`(x, year)
 }

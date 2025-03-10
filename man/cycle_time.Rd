@@ -99,7 +99,7 @@ this:
   origin                           origin
 }\if{html}{\out{</div>}}
 
-Note that now the origin is not fix, but cyclical.
+Note that now the origin is not fixed, but cyclical.
 
 \code{cycle_time()} operates by converting linear time objects using a circular
 approach relative to the cycle length (e.g, \code{cycle = 86400} (1 day)).

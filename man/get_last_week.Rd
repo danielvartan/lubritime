@@ -40,10 +40,13 @@ get_last_week(as.Date(c("2024-12-06", "2024-12-15")))
 
 get_last_month(as.Date(c("2024-12-06", "2024-11-15")))
 #> [1] 2024-11-01 UTC--2024-11-30 UTC  # Expected
-#> [2] 2024-10-01 UTC--2024-10-30 UTC # Expected
+#> [2] 2024-10-01 UTC--2024-10-31 UTC # Expected
 }
 \seealso{
 Other utility functions: 
+\code{\link{change_date}()},
+\code{\link{fix_hms}()},
+\code{\link{flat_posixt_date}()},
 \code{\link{round_time}()}
 }
 \concept{utility functions}

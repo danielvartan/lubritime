@@ -85,7 +85,7 @@
 #' #> [1] "20515s (~5.7 hours)" "9675s (~2.69 hours)" # Expected
 round_time <- function(x) {
   classes <- c("Duration", "difftime", "hms", "POSIXct", "POSIXlt")
-  prettycheck:::assert_multi_class(x, classes)
+  checkmate::assert_multi_class(x, classes)
 
   UseMethod("round_time")
 }

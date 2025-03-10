@@ -4,7 +4,7 @@
 \name{lubritime-package}
 \alias{lubritime}
 \alias{lubritime-package}
-\title{lubritime: An Extension for the Lubridate Package}
+\title{lubritime: An Extension for lubridate}
 \description{
 An extension for the 'lubridate' package from tidyverse, adding new features to deal with temporal objects.
 }
