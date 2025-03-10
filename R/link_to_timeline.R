@@ -32,7 +32,7 @@
 #' @param x A [`hms`][hms::hms()] or [`POSIXt`][base::as.POSIXct()] object.
 #'   If `x` is a `POSIXt` object, only the time part will be used.
 #' @param threshold (Optional) A [`hms`][hms::hms()] object representing the
-#'   threshold time (Default: `hms::parse_hms("12:00:00")`).
+#'   threshold time (Default: `hms::parse_hm("12:00")`).
 #'
 #' @returns A [`POSIXt`][base::as.POSIXct()] object with the same time as `x`,
 #'  but linked to a timeline based on `threshold` and the
@@ -102,13 +102,14 @@
 #'   mean() |>
 #'   hms::as_hms()
 #' #> 02:00:00 # Expected
-link_to_timeline <- function(x, threshold = hms::parse_hms("12:00:00")) {
+link_to_timeline <- function(x, threshold = hms::parse_hm("12:00")) {
   checkmate::assert_multi_class(x, c("hms", "POSIXt"))
 
   prettycheck::assert_hms(
     threshold,
     lower = hms::hms(0),
-    upper = hms::parse_hms("23:59:59")
+    upper = hms::parse_hms("23:59:59"),
+    null_ok = TRUE
   )
 
   x <-
@@ -116,18 +117,22 @@ link_to_timeline <- function(x, threshold = hms::parse_hms("12:00:00")) {
     as.POSIXct() |>
     flat_posixt_date()
 
-  if (
-    all(
-      hms::as_hms(min(x, na.rm = TRUE)) < threshold &
-        hms::as_hms(max(x, na.rm = TRUE)) < threshold,
-      na.rm = TRUE
-    )
-  ) {
-    x
+  if (!is.null(threshold)) {
+    if (
+      all(
+        hms::as_hms(min(x, na.rm = TRUE)) < threshold &
+          hms::as_hms(max(x, na.rm = TRUE)) < threshold,
+        na.rm = TRUE
+      )
+    ) {
+      x
+    } else {
+      dplyr::case_when(
+        hms::as_hms(x) < threshold ~ lubridate::`day<-`(x, 2),
+        TRUE ~ x
+      )
+    }
   } else {
-    dplyr::case_when(
-      hms::as_hms(x) < threshold ~ lubridate::`day<-`(x, 2),
-      TRUE ~ x
-    )
+    x
   }
 }

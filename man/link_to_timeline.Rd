@@ -4,14 +4,14 @@
 \alias{link_to_timeline}
 \title{Link local times to a timeline}
 \usage{
-link_to_timeline(x, threshold = hms::parse_hms("12:00:00"))
+link_to_timeline(x, threshold = hms::parse_hm("12:00"))
 }
 \arguments{
 \item{x}{A \code{\link[hms:hms]{hms}} or \code{\link[base:as.POSIXlt]{POSIXt}} object.
 If \code{x} is a \code{POSIXt} object, only the time part will be used.}
 
 \item{threshold}{(Optional) A \code{\link[hms:hms]{hms}} object representing the
-threshold time (Default: \code{hms::parse_hms("12:00:00")}).}
+threshold time (Default: \code{hms::parse_hm("12:00")}).}
 }
 \value{
 A \code{\link[base:as.POSIXlt]{POSIXt}} object with the same time as \code{x},
