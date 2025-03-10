@@ -57,10 +57,10 @@ int_3 <- lubridate::interval(
 )
 
 int_overlap(int_1, int_2)
-#> [1] 2020-05-01 UTC--2021-01-01 UTC
+#> [1] 2020-05-01 UTC--2021-01-01 UTC # Expected
 
 int_overlap(int_1, c(int_2, int_3))
-#> [1] 2020-05-01 UTC--2021-01-01 UTC
+#> [1] 2020-05-01 UTC--2021-01-01 UTC # Expected
 #> [2] 2021-01-01 UTC--2021-01-01 UTC
 }
 \seealso{

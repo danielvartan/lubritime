@@ -193,7 +193,7 @@ Learn more about \code{\link[lubridate:period]{Period}} objects in the \href{htt
 Wickham & Grolemund book (n.d.).
 }
 
-\subsection{\code{POSIXt} objects}{
+\subsection{\code{POSIXt} Objects}{
 
 \code{\link[base:DateTimeClasses]{POSIXt}} objects in \code{...} will be stripped of their
 dates. Only the time will be considered.
@@ -203,7 +203,7 @@ objects that inherits the class \code{\link[base:DateTimeClasses]{POSIXt}}. Lear
 about it in \code{\link[base:DateTimeClasses]{?DateTimeClasses}}.
 }
 
-\subsection{\code{Interval} objects}{
+\subsection{\code{Interval} Objects}{
 
 By using \code{\link[lubridate:interval]{Interval}} objects in \code{...}, \code{sum_time()}
 and \code{vct_sum_time()} will consider only their time spans. That is, the
@@ -213,7 +213,7 @@ Learn more about \code{\link[lubridate:interval]{Interval}} objects in the \href
 Wickham & Grolemund (n.d.).
 }
 
-\subsection{Timeline irregularities}{
+\subsection{Timeline Irregularities}{
 
 This function does not take into account timeline irregularities (e.g.,
 leap years, DST, leap seconds). This may not be an issue for most people, but

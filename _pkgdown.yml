@@ -51,6 +51,7 @@ reference:
   contents:
   - change_date
   - convert_to_unit
+  - extract_seconds
   - get_last_week
   - fix_hms
   - flat_posixt_date

@@ -109,6 +109,7 @@ Other date-time rounding functions:
 
 Other utility functions: 
 \code{\link{change_date}()},
+\code{\link{extract_seconds}()},
 \code{\link{fix_hms}()},
 \code{\link{flat_posixt_date}()},
 \code{\link{get_last_week}()}

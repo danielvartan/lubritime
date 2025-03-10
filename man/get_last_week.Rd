@@ -45,6 +45,7 @@ get_last_month(as.Date(c("2024-12-06", "2024-11-15")))
 \seealso{
 Other utility functions: 
 \code{\link{change_date}()},
+\code{\link{extract_seconds}()},
 \code{\link{fix_hms}()},
 \code{\link{flat_posixt_date}()},
 \code{\link{round_time}()}

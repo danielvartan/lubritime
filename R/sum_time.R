@@ -162,7 +162,7 @@
 #' times](https://r4ds.had.co.nz/dates-and-times.html#periods) chapter of
 #' Wickham & Grolemund book (n.d.).
 #'
-#' ## `POSIXt` objects
+#' ## `POSIXt` Objects
 #'
 #' [`POSIXt`][base::DateTimeClasses] objects in `...` will be stripped of their
 #' dates. Only the time will be considered.
@@ -171,17 +171,17 @@
 #' objects that inherits the class [`POSIXt`][base::DateTimeClasses]. Learn more
 #' about it in [`?DateTimeClasses`][base::DateTimeClasses].
 #'
-#' ## `Interval` objects
+#' ## `Interval` Objects
 #'
-#' By using [`Interval`][lubridate::interval()] objects in `...`, `sum_time()`
+#' By using [`Interval`][lubridate::interval] objects in `...`, `sum_time()`
 #' and `vct_sum_time()` will consider only their time spans. That is, the
 #' amount of seconds of the intervals.
 #'
-#' Learn more about [`Interval`][lubridate::interval()] objects in the [Dates
+#' Learn more about [`Interval`][lubridate::interval] objects in the [Dates
 #' and times](https://r4ds.had.co.nz/dates-and-times.html#periods) chapter of
 #' Wickham & Grolemund (n.d.).
 #'
-#' ## Timeline irregularities
+#' ## Timeline Irregularities
 #'
 #' This function does not take into account timeline irregularities (e.g.,
 #' leap years, DST, leap seconds). This may not be an issue for most people, but
@@ -203,10 +203,9 @@
 #'   `FALSE`).
 #'
 #' @return
-#'
-#' * If `cycle = NULL`, a [`Duration`][lubridate::duration()] object with a
+#' - If `cycle = NULL`, a [`Duration`][lubridate::duration()] object with a
 #' linear sum of the time from objects in `...`.
-#' * If `cycle != NULL`, a [`Duration`][lubridate::duration()] object with a
+#' - If `cycle != NULL`, a [`Duration`][lubridate::duration()] object with a
 #' circular sum of the time from objects in `...`.
 #'
 #' @family time arithmetic functions

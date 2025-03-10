@@ -80,6 +80,7 @@ change_date(x, as.Date("2000-01-01"))
 }
 \seealso{
 Other utility functions: 
+\code{\link{extract_seconds}()},
 \code{\link{fix_hms}()},
 \code{\link{flat_posixt_date}()},
 \code{\link{get_last_week}()},

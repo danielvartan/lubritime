@@ -31,6 +31,7 @@ hms::parse_hm(c("02:00", "24:00", "18:00")) |> fix_hms()
 \seealso{
 Other utility functions: 
 \code{\link{change_date}()},
+\code{\link{extract_seconds}()},
 \code{\link{flat_posixt_date}()},
 \code{\link{get_last_week}()},
 \code{\link{round_time}()}

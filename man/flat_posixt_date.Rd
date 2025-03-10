@@ -63,6 +63,7 @@ c(
 \seealso{
 Other utility functions: 
 \code{\link{change_date}()},
+\code{\link{extract_seconds}()},
 \code{\link{fix_hms}()},
 \code{\link{get_last_week}()},
 \code{\link{round_time}()}
