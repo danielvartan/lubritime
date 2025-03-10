@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2025-03-10T01:28Z
+last_built: 2025-03-10T01:59Z
 urls:
   reference: https://danielvartan.github.io/lubritime/reference
   article: https://danielvartan.github.io/lubritime/articles
