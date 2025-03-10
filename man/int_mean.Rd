@@ -44,6 +44,7 @@ c(
 }
 \seealso{
 Other Interval functions: 
-\code{\link{int_duration}()}
+\code{\link{int_duration}()},
+\code{\link{int_overlap}()}
 }
 \concept{Interval functions}

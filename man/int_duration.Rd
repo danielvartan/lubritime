@@ -53,6 +53,7 @@ c(
 }
 \seealso{
 Other Interval functions: 
-\code{\link{int_mean}()}
+\code{\link{int_mean}()},
+\code{\link{int_overlap}()}
 }
 \concept{Interval functions}

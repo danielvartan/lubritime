@@ -45,6 +45,7 @@ reference:
   contents:
   - int_duration
   - int_mean
+  - int_overlap
 
 - title: Utilities
   contents:
