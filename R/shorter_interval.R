@@ -207,7 +207,7 @@ int_build <- function(x, y, method = "shorter") {
     as.POSIXct() |>
     flat_posixt_date()
 
-  list2env(rutils::swap_if(x, y, x > y), envir = environment())
+  list2env(swap_if(x, y, x > y), envir = environment())
 
   x1_y1_interval <- lubridate::interval(x, y)
   y1_x2_interval <- lubridate::interval(y, x + lubridate::days())
@@ -232,7 +232,7 @@ int_build <- function(x, y, method = "shorter") {
     flags <- which(x1_y1_interval == y1_x2_interval) # nolint
 
     cli::cli_alert_warning(paste0(
-      "Element{?s} {rutils:::single_quote_(as.character(flags))} of 'x' ",
+      "Element{?s} {single_quote(as.character(flags))} of 'x' ",
       "and 'y' have intervals equal to 12 hours, i.e., ",
       "there's no shorter or longer interval ",
       "between the two hours (they are equal). Only one ",

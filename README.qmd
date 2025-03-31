@@ -9,12 +9,10 @@
 library(beepr)
 library(cffr)
 library(codemetar)
-library(groomr) # https://github.com/danielvartan/groomr
+library(groomr) # github.com/danielvartan/groomr
 library(here)
 library(lubritime)
-library(readr)
-library(rutils) # https://github.com/danielvartan/rutils
-library(stringr)
+library(rutils) # github.com/danielvartan/rutils
 ```
 
 <!-- badges: start -->
@@ -51,7 +49,7 @@ MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/lic
 
 Contributions are welcome, including bug reports. Take a moment to review our [Guidelines for Contributing](https://danielvartan.github.io/lubritime/CONTRIBUTING.html).
 
-<br>
+`<br>`{=html}
 
 Become an `lubritime` supporter!
 

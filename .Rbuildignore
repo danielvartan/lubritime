@@ -1,9 +1,9 @@
+^_pkgdown\.yml$
+^_quarto\.yml$
 ^\.github$
 ^\.lintr$
-^.quarto$
 ^\.Rproj\.user$
-^_quarto\.yml$
-^_pkgdown\.yml$
+^\.vscode$
 ^CITATION\.cff$
 ^CODE_OF_CONDUCT\.md$
 ^codecov\.yml$
